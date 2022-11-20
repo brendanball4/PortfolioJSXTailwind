@@ -15,7 +15,7 @@ export default [
         year: "2018-2020",
         title: "Graduated College",
         duration: "2 years",
-        details: "I graduated completing my Software Development Diploma at the Medicine Hat College.",
+        details: "I graduated, completing my Software Development Diploma at the Medicine Hat College.",
     },
     {
         year: "2014-2017",
