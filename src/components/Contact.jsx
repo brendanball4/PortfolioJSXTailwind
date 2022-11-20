@@ -25,7 +25,7 @@ function Contact() {
                         rows="10"
                         className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
                     />
-                    <button type="submit" className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white">Send</button>
+                    <button type="submit" className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-orange-700 drop-shadow-md hover:stroke-white">Send</button>
                 </form>
             </div>
         </div>
