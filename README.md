@@ -1,1 +1,1 @@
-## Portfolio Website Using JSX, Tailwind, and Vite
+## Portfolio Website Using React, Tailwind, and Vite

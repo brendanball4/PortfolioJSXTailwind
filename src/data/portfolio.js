@@ -12,6 +12,6 @@ export default [
     {
         title: 'Admin Web App',
         imgUrl: 'assets/images/admin.PNG',
-        stack: ['HTML', 'CSS', 'PHP8.1', 'Bootstrap 4'],
+        stack: ['HTML', 'CSS', 'PHP8.1', 'Bootstrap 4', 'MySQL'],
     },
 ]
