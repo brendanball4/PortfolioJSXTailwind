@@ -1,9 +1,11 @@
 import React from "react";
 
-function PortfolioItem({ title, imgUrl, stack }) {
+function PortfolioItem({ title, imgUrl, stack, link }) {
    return (
-      <a 
-         href="#"
+      <a
+         target="_blank"
+         rel="noopener noreferrer"
+         href={link}
          className="border-2 border-stone-900 dark:border-green-300 rounded-md overflow-hidden"
       >
          <img
