@@ -11,21 +11,21 @@ function Contact() {
                         type="text"
                         name="name"
                         placeholder="Name"
-                        className="p-2 bg-transparent border-2 rounded-md focus:outline-none dark:border-green-300"
+                        className="p-2 bg-transparent border-2 rounded-md focus:outline-none dark:border-stone-100"
                     />
                     <input 
                         type="email"
                         name="email"
                         placeholder="Email Address"
-                        className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none dark:border-green-300"
+                        className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none dark:border-stone-100"
                     />
                     <textarea 
                         name="message" 
                         placeholder="Message" 
                         rows="10"
-                        className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none dark:border-green-300"
+                        className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none dark:border-stone-100"
                     />
-                    <button type="submit" className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-orange-700 drop-shadow-md hover:stroke-white">Send</button>
+                    <button type="submit" className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-stone-500 to-gray-700 drop-shadow-md hover:stroke-white">Send</button>
                 </form>
             </div>
         </div>

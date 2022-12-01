@@ -10,7 +10,7 @@ function Intro() {
                 I am currently enrolled in University and majoring in Computer Science.<br />
                 I have co-developed a few projects that are showcased in the Portfolio section.
                 One project is an HR web application built on .NET CORE 5, EntityFramwork, Blazor, Docker, and more! 
-                This was created in collaboration with the <a href='https://www.mhfoodbank.com/' className='text-green-300 hover:underline underline-offset-2 decoration-1'>Medicine Hat Food Bank</a>.
+                This was created in collaboration with the <a href='https://www.mhfoodbank.com/' className='text-stone-100 underline decoration-transparent hover:decoration-inherit transition duration-300 ease-in-out'>Medicine Hat Food Bank</a>.
             </p>
         </div>
     )

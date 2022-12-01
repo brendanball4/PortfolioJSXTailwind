@@ -15,7 +15,7 @@ export default [
         year: "2018-2020",
         title: "Graduated College",
         duration: "2 years",
-        details: "I graduated, completing my Software Development Diploma at the Medicine Hat College.",
+        details: "I graduated from college, completing my Software Development Diploma at the Medicine Hat College. I was invited to and joined Phi Theta Kappa.",
     },
     {
         year: "2014-2017",
