@@ -3,4 +3,4 @@
 
 ### Image preview of the website
 
-![Alt text](pulic/assets/images/gitreadme.png?raw=true "Portfolio Website")
+![Alt text](public/assets/images/gitreadme.png?raw=true "Portfolio Website")
