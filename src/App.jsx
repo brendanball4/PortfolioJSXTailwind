@@ -4,6 +4,8 @@ import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import scroll from "./components/scroll";
+import ScrollToTopButton from "./components/scroll";
 
 
 function App() {
@@ -11,35 +13,12 @@ function App() {
   	const [theme, setTheme] = useState(null);
 
 	useEffect(() => {
-		window.addEventListener("scroll", () => {
-			const targets = document.querySelectorAll(".js-show-on-scroll");
-			if (window.scrollY > 200) {
-				targets.forEach(function(target) {
-					target.classList.remove("animate-fadeOut");
-					target.classList.add("animate-fadeIn");
-				});
-				setBackToTop(true);
-			} else {
-				targets.forEach(function(target) {
-					target.classList.remove("animate-fadeIn");
-					target.classList.add("animate-fadeOut");
-				});
-			}
-		}, []);
-
 		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 			setTheme("dark");
 		} else {
 			setTheme("light");
 		}
 	}, []);
-
-	const handleScrollTop = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth"
-		})
-	}
 
 	const handleThemeSwitch = () => {
 		setTheme(theme === "dark" ? "light" : "dark");
@@ -104,29 +83,9 @@ function App() {
 				<Contact />
 				<Footer />
 			</div>
-			{backToTop && (
 				<div>
-					<button 
-						type="button"
-						onClick={handleScrollTop}
-						className="js-show-on-scroll fixed p-2 z-10 right-10 bottom-4 bg-violet-300 dark:bg-gray-600 text-lg p-5 rounded-3xl">
-							<svg 
-								xmlns="http://www.w3.org/2000/svg" 
-								fill="none" 
-								viewBox="0 0 24 24" 
-								strokeWidth="1.5" 
-								stroke="currentColor" 
-								className="animate-pulse w-6 h-6"
-							>
-								<path 
-									strokeLinecap="round" 
-									strokeLineJoin="round" 
-									d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" 
-								/>
-							</svg>
-					</button>
+					<ScrollToTopButton />
 				</div>
-			)}
 		</div>
 	 </>
   )
