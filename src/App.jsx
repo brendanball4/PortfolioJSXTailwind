@@ -4,12 +4,10 @@ import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import scroll from "./components/scroll";
 import ScrollToTopButton from "./components/scroll";
 
 
 function App() {
-	const [isAlertOpen, setIsAlertOpen] = useState(false);
 	const [backToTop, setBackToTop] = useState(false);
   	const [theme, setTheme] = useState(null);
 
@@ -19,36 +17,11 @@ function App() {
 		} else {
 			setTheme("light");
 		}
-	}, []);
-
-	function CustomAlert({ isOpen, message, onClose }) {
-		if (!isOpen) return null;
-	  
-		return (
-			<div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex justify-center items-center">
-				<div className="bg-white p-4 rounded-lg shadow">
-					<p>{message}</p>
-					<button onClick={onClose} className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
-						Close
-					</button>
-				</div>
-			</div>
-		);
-	};
-	  
+	}, []);  
 
 	const handleThemeSwitch = () => {
 		setTheme(theme === "dark" ? "light" : "dark");
 	};
-
-	const showAlert = () => {
-		setIsAlertOpen(true);
-	};
-	
-	const closeAlert = () => {
-		setIsAlertOpen(false);
-	};
-	
 
 	useEffect(() => {
 		if (theme === "dark") {
@@ -167,7 +140,7 @@ function App() {
                         </a>
                         <a 
 							onClick={() => copyToClipboard(emailAddress)}
-                            className="absolute 2xl:fixed z-10 right-[205px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                            className="absolute 2xl:fixed z-10 right-[205px] cursor-pointer bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 							<svg xmlns="http://www.w3.org/2000/svg" 
 							width="20" height="20" 
 							fill="currentColor" 

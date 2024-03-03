@@ -5,13 +5,6 @@ function PortfolioItem({ title, images, stack, link }) {
    return (
    <div className="border-2 border-stone-900 dark:border-stone-400 rounded-md overflow-hidden">
       <Carousel images={images} />
-      <a
-         target="_blank"
-         rel="noopener noreferrer"
-         href={link}
-      >
-         
-      </a>
       <a className="text-lg md:text-2xl hover:text-blue-500 hover:underline" target="_blank"
          rel="noopener noreferrer"
          href={link}>

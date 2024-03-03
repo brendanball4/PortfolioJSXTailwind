@@ -1,15 +1,21 @@
 export default [
     {
         year: "2020-2024",
+        title: "Graduated Computer Science",
+        duration: "4 years",
+        details: "I have graduated with my Bachelor's in Computer Science.",
+    },
+    {
+        year: "2020-2024",
         title: "Student at University of Lethbridge",
-        duration: "3 years",
-        details: "I am currently enrolled as a student working towards my Bachelor of Science majoring in Computer Science. I have solo and co-developed multiple projects that I worked on during the time I spent here.",
+        duration: "4 years",
+        details: "I was enrolled as a student working towards my Bachelor of Science majoring in Computer Science. I have solo and co-developed multiple projects that I worked on during the time I spent here.",
     },
     {
         year: "2020-2021",
         title: "Web Developer",
         duration: "1 1/2 years",
-        details: "Developed an HR Application for the Medicine Hat Food Bank. This system used HTML, CSS, Bootstrap 4, C#, Blazor, Entity Framwork, MariaDB, and more!",
+        details: "I developed an HR Application for the Medicine Hat Food Bank. This system used HTML, CSS, Bootstrap 4, C#, Blazor, Entity Framwork, MariaDB, and more!",
     },
     {
         year: "2018-2020",
