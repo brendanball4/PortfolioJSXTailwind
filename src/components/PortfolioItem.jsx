@@ -1,18 +1,20 @@
 import React from "react";
+import Carousel from "./Carousel";
 
-function PortfolioItem({ title, imgUrl, stack, link }) {
+function PortfolioItem({ title, images, stack, link }) {
    return (
+   <div className="border-2 border-stone-900 dark:border-stone-400 rounded-md overflow-hidden">
+      <Carousel images={images} />
       <a
          target="_blank"
          rel="noopener noreferrer"
          href={link}
-         className="border-2 border-stone-900 dark:border-stone-400 rounded-md overflow-hidden"
       >
-         <img
-            src={imgUrl}
-            alt="portfolio" 
-            className="w-full h-36 md:h-48 object-cover cursor-pointer"
-         />
+         
+      </a>
+      <a className="text-lg md:text-2xl hover:text-blue-500 hover:underline" target="_blank"
+         rel="noopener noreferrer"
+         href={link}>
          <div className="w-full p-4">
             <h3 className="text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold ">{title}</h3>
             <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm dark:text-white">
@@ -24,6 +26,7 @@ function PortfolioItem({ title, imgUrl, stack, link }) {
             </p>
          </div>
       </a>
+   </div>
    )
 }
 

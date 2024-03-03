@@ -3,14 +3,12 @@ import React from 'react';
 function Intro() {
     return (
         <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
-            <h1 className='text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold'>Brendan M. Ball</h1>
-            <p className='text-base md:text-xl mb-3 font-medium'>Software & Web Developer</p>
-            <p className='text-sm max-w-xl mb-6 font-bold'>
-                I'm a software & web devloper that builds my apps from the ground up using the latest and greatest that technology has to offer.
-                I am currently enrolled in University and majoring in Computer Science.<br />
-                I have co-developed a few projects that are showcased in the Portfolio section.
-                One project is an HR web application built on .NET CORE 5, EntityFramwork, Blazor, Docker, and more! 
-                This was created in collaboration with the <a href='https://www.mhfoodbank.com/' className='text-stone-100 underline decoration-transparent hover:decoration-inherit transition duration-300 ease-in-out'>Medicine Hat Food Bank</a>.
+            <h1 className='text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold'>Brendan Ball</h1>
+            <p className='text-base md:text-xl mb-3 font-medium'>Full Stack Developer</p>
+            <p className='text-md max-w-xl mb-6 font-bold'>
+            Hi there! As a full stack developer, I specialize in crafting applications from the ground up, leveraging my expertise in C#, Python, C++, and various associated frameworks to bring ideas to life. 
+            I have dedicated myself to both solo and collaborative development efforts that are featured in the Portfolio section. 
+            My portfolio showcases a wide array of projects, reflecting my ability to navigate and utilize a diverse tech stack effectively.
             </p>
         </div>
     )
