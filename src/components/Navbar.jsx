@@ -1,9 +1,12 @@
-import React from 'react';
+import { domainName, discordUsername, emailAddress, linkedin, github } from '../constants/constants';
+import { FiArrowLeft } from 'react-icons/fi';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 
-const SocialMediaLinks = () => {
-	const discordUsername = 'itsnynx'; // Replace with your actual Discord username and tag
-	const emailAddress = "ball.brendan10@gmail.com";
+const Navbar = () => {
+  const [isArrowHovered, setIsArrowHovered] = useState(false);
 
+  const isProjectPage = window.location.href.includes('project');
 	const copyToClipboard = (text) => {
 	  navigator.clipboard.writeText(text).then(
 		() => {
@@ -11,7 +14,7 @@ const SocialMediaLinks = () => {
 				alert('Discord username copied to clipboard! Send me a friend/message request on Discord and we\'ll connect from there!');
 			} else if (text == emailAddress){
 				if (window.confirm('Email address copied to clipboard! Click \'OK\' to open your default email application or \'Cancel\' to decline. Continue?')) {
-					window.location.href = 'mailto:ball.brendan10@gmail.com';
+					window.location.href = `mailto:{emailAddress}`;
 				}
 			}
 		},
@@ -23,8 +26,34 @@ const SocialMediaLinks = () => {
 
   return (
     <>
+      {isProjectPage ? (
+        <AnimatePresence>
+          <motion.div
+            className="fixed bottom-5 right-0 mb-2 mr-2 z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}>
+            <a
+              className="absolute xl:fixed p-2 left-5 top-3.5 bg-violet-300 dark:bg-gray-500 text-lg p-2 rounded-full"
+              href={domainName}
+              onMouseEnter={() => setIsArrowHovered(true)} // Set arrow hover state to true
+              onMouseLeave={() => setIsArrowHovered(false)} // Set arrow hover state to false
+            >
+              <div className={`flex items-center justify-center text-white hover:animate-pulse ${isArrowHovered ? 'animate-pulse' : ''}`}>
+                <FiArrowLeft size={20} />
+                <p className='overflow-hidden'></p>Home
+              </div>
+            </a>
+          </motion.div>
+      </AnimatePresence>
+        ) : (
+          // Content for other pages
+          <div></div>
+        )}
+
+
       <a
-        href="https://linkedin.com/in/brendanmball"
+        href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
         className="social-link linkedin absolute 2xl:fixed right-[160px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
@@ -41,7 +70,7 @@ const SocialMediaLinks = () => {
       </a>
 
       <a
-        href="https://github.com/brendanball4"
+        href={github}
         target="_blank"
         rel="noopener noreferrer"
         className="social-link github absolute 2xl:fixed z-10 right-[115px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
@@ -93,4 +122,4 @@ const SocialMediaLinks = () => {
   );
 };
 
-export default SocialMediaLinks;
+export default Navbar;

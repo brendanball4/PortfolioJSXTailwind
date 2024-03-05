@@ -3,14 +3,14 @@ export default [
         id: 1,
         title: 'HR Web App',
         images: ['assets/images/HR Web App/login.png', 'assets/images/HR Web App/calendar.png', 'assets/images/HR Web App/register_1.png', 'assets/images/HR Web App/register_2.png', 'assets/images/HR Web App/team.png', 'assets/images/HR Web App/team_edit.png', 'assets/images/HR Web App/timesheet.png',],
-        stack: [ 'Collaboration', 'HTML', 'CSS', 'Bootstrap 4', 'C#', 'Blazor', 'Entity Framework', 'MariaDB', 'Docker'],
+        stack: [ 'C#', 'HTML/CSS', 'Blazor', 'Bootstrap 4', 'Entity Framework', 'MariaDB', 'Docker'],
         link: 'https://github.com/cdmoss/hrmanager-blazorapp',
     },
     {
         id: 2,
         title: 'Developer Portfolio',
         images: ['assets/images/Dev Portfolio/DevPortfolio.PNG'],
-        stack: ['React', 'Tailwind', 'Vite'],
+        stack: ['JSX/React', 'Tailwind', 'Vite'],
         link: 'https://github.com/brendanball4/PortfolioJSXTailwind',
     },
     {
@@ -33,5 +33,12 @@ export default [
         images: ['assets/images/Graphic Design/isometricroom.PNG', 'assets/images/Graphic Design/fancyDonut.PNG', 'assets/images/Graphic Design/SkinMan.PNG', 'assets/images/Graphic Design/PolyMan.PNG'],
         stack: ['Blender', 'Graphic Design', 'Art'],
         link: 'https://github.com/brendanball4/blender-projects',
+    },
+    {
+        id: 6,
+        title: 'Twitch Chat Bot',
+        images: ['assets/images/Graphic Design/isometricroom.PNG'],
+        stack: ['Node.js', 'Twitch'],
+        link: 'https://github.com/brendanball4/TwitchChatBot',
     },
 ]

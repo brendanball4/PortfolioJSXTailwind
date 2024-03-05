@@ -1,6 +1,5 @@
 import React from 'react';
-const discordUsername = 'itsnynx'; // Replace with your actual Discord username and tag
-const emailAddress = "ball.brendan10@gmail.com";
+import { discordUsername, emailAddress, linkedin, github } from '../constants/constants';
 
 const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(
@@ -21,36 +20,37 @@ const copyToClipboard = (text) => {
 
 function Footer() {
     return (
-        <div className='py-5 text-center'>
-            <div className="container max-w-screen-lg mx-auto">
-                <div>
-                    <div className="flex flex-wrap justify-center gap-2">
-                    <a
-        onClick={() => copyToClipboard(discordUsername)}
-        className="bg-gray-500 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-            width="20" height="20"
-            className="w-5"
-            fill="currentColor" 
-            class="bi bi-discord" 
-            viewBox="0 0 16 16">
-                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-        </svg>
-      </a>
+        <footer className='bg-gray-800 text-white p-4 w-full'>
+            <div className='py-5 text-center text-white mt-auto'>
+                <div className="container mx-auto px-4">
+                    <div>
+                        <div className="flex justify-center gap-2">
+                        <a
+                            onClick={() => copyToClipboard(discordUsername)}
+                            className="bg-gray-500 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="20" height="20"
+                                className="w-5"
+                                fill="currentColor" 
+                                class="bi bi-discord" 
+                                viewBox="0 0 16 16">
+                                    <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                            </svg>
+                        </a>
 
-      <a
-        onClick={() => copyToClipboard(emailAddress)}
-        className="bg-gray-500 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-            width="20" height="20" 
-            fill="currentColor" 
-            class="bi bi-envelope-fill" 
-            viewBox="0 0 16 16">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-        </svg>
-      </a>
+                        <a
+                            onClick={() => copyToClipboard(emailAddress)}
+                            className="bg-gray-500 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="20" height="20" 
+                                fill="currentColor" 
+                                class="bi bi-envelope-fill" 
+                                viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                            </svg>
+                        </a>
                         <a 
-                            href="https://linkedin.com/in/brendanmball"
+                            href={linkedin}
                             className="bg-gray-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                             <svg
                             className="w-5 h-5 fill-current"
@@ -65,7 +65,7 @@ function Footer() {
                         </a>
 
                         <a 
-                            href="https://github.com/brendanball4"
+                            href={github}
                             className="bg-gray-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                             <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -86,18 +86,15 @@ function Footer() {
                             </g>
                             </svg>
                         </a>
-
-
-
-
                         </div>
-                        </div>
-                        </div>
-            <p className='text-sm mt-2 opacity-50'>
+                    </div>
+                </div>
+            </div>
+            <p className='text-sm text-center mt-2 opacity-50'>
                 &copy; {new Date().getFullYear()} Brendan Ball. All Rights Reserved.
             </p>
-        </div>
-    )
+        </footer>
+    );
 }
 
 export default Footer;

@@ -1,15 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Project from '../components/Project';
-import Footer from '../components/Footer';
+import ProjectItem from '../components/ProjectItem';
 
 function ProjectPage() {
   let { id } = useParams();
 
   return (
     <div>
-        <Project />
-        <Footer />
+      <div className='flex flex-col justify-between min-h-screen'>
+        <ProjectItem />
+      </div>
     </div>
   );
 }

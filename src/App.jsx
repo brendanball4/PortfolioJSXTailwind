@@ -89,7 +89,6 @@ function App() {
 				<Portfolio />
 				<Timeline />
 				<Contact />
-				<Footer />
 				<ScrollToTopButton />
 				</>
 			} />
@@ -101,13 +100,13 @@ function App() {
 				<Portfolio />
 				<Timeline />
 				<Contact />
-				<Footer />
 				<ScrollToTopButton />
 				</>
 			} />
 			{/* Define other routes as needed */}
 			</Routes>
 		</div>
+		<Footer />
 	  </div>
     </Router>
 	 </>
