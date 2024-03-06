@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import projects from '../data/project';
+import projects from '../data/portfolio';
 import Title from './Title';
+import Carousel from './Carousel';
 
 const ProjectItem = () => {
   const { id } = useParams(); // This gets the `id` from the URL
@@ -12,29 +13,41 @@ const ProjectItem = () => {
   // Find the project with the given ID
   const project = projects.find(project => project.id === projectId);
 
+  for (let index = 0; index < project.images.length; index++) {
+    project.images[index] = '../' + project.images[index];
+  }
+
   if (!project) {
-    return <div className='pt-20 text-2xl'>
-                <h1 className='text-red-400'>Project not found! Please contact the site owner if the problem persists.</h1>
+    return <div className='pt-20'>
+                <h1 className='text-red-400 underline text-2xl'>Project not found!</h1>
+                <p className='text-white text-lg'>Please contact the <a href='mailto:ball.brendan10@gmail.com' className='text-blue-500 hover:text-blue-300 hover:underline'>site owner</a> if the problem persists.</p>
             </div>;
   }
 
   return (
     <div>
+        {/* Project Title */}
         <div className='pt-20'>
-            <Title>{project.title}</Title>
+            <Title>{project.title_ext}</Title>
         </div>
-        {/*project.images.map((image, index) => (
-          <img key={index} src={require(`path/to/images/${image}`)} alt="Project" />
-        ))*/}
-      <p>{project.description}</p>
-      {/* Render other project details */}
-      <div>
-      </div>
-      <ul>
-        {project.stack.map((tech, index) => (
-          <li key={index}>{tech}</li>
+
+        {/* Image Carousel */}
+        <div className='min-w-[500px] max-w-[600px] mx-auto my-auto mb-3'>
+          <Carousel images={project.images} />
+        </div>
+
+        {/* Project Description */}
+        <p className='mb-3 text-stone-300'>{project.desc}</p>
+
+        {/* Stack Display */}
+        <div>
+          Stack used:
+        </div>
+        {project.stack.map(item => (
+          <div key={item} className="rounded-full mr-2 text-stone-900 bg-stone-300 inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-stone-300 rounded-md">
+              {item}
+          </div>
         ))}
-      </ul>
       <a
         href={project.link}
         target="_blank"

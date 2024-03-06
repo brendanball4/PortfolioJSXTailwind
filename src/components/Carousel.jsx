@@ -49,11 +49,12 @@ const Carousel = ({ images }) => {
       <div className="relative w-full max-w-4xl h-64 overflow-hidden group">
         {/* Adjusted Image Container */}
         <div className="relative w-full h-full">
-          <img
-            src={images[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
-            className="w-full h-full object-cover cursor-pointer group-hover:opacity-75"
-          />
+
+              <img
+              src={images[currentIndex]}
+              alt={`Slide ${currentIndex + 1}`}
+              className="w-full h-full object-cover cursor-pointer group-hover:opacity-75"
+            />
           <div onClick={openModal} className="absolute inset-0 flex justify-center cursor-pointer items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             <FiZoomIn className="text-white text-6xl" />
           </div>
@@ -81,7 +82,7 @@ const Carousel = ({ images }) => {
   onClick={closeModal}
   >
   <div
-    className="relative bg-white p-4 rounded-lg shadow-lg max-w-4xl xl:min-w-[1500px] mx-auto my-auto"
+    className="relative bg-white p-4 rounded-lg shadow-lg max-w-[200px] xl:max-w-[1000px] 2-xl:max-w-[300px] mx-auto my-auto"
     onClick={(e) => e.stopPropagation()}
   >
       {/* Modal navigation arrows */}

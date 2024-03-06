@@ -1,5 +1,5 @@
 // Assuming this is in src/constants/constants.js
-const domainName = "http://www.bmball.com/";
+const domainName = "http://localhost:5173/";
 const discordUsername = 'itsnynx';
 const emailAddress = "ball.brendan10@gmail.com";
 const linkedin = "https://linkedin.com/in/brendanmball";

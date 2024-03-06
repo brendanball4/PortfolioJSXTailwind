@@ -1,9 +1,8 @@
 import React from "react";
 import Carousel from "./Carousel";
 import { domainName } from "../constants/constants"; // Adjust the path as needed
-import { FaArrowRight } from "react-icons/fa";
 
-function PortfolioItem({ id, title, images, stack, link }) {
+function PortfolioItem({ id, title, images, stack }) {
    return (
    <div className="border-2 border-stone-900 dark:border-stone-400 rounded-md overflow-hidden">
       <Carousel images={images} />
