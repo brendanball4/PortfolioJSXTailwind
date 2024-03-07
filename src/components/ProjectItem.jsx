@@ -25,15 +25,15 @@ const ProjectItem = () => {
   }
 
   return (
-    <div className='grid grid-flow-row-dense grid-cols-2 grid-rows-2'>
+    <div className='grid grid-flow-row-dense md:grid-cols-2 md:grid-rows-2'>
         {/* Project Title */}
         <div className='pt-28'>
             <Title>{project.title_ext}</Title>
-            <p className='mt-8 text-stone-300'>{project.desc}</p>
+            <p className='mt-8 text-black dark:text-stone-300'>{project.desc}</p>
         </div>
 
         {/* Image Carousel */}
-        <div className='min-w-[525px] max-w-[600px] mx-auto my-auto ml-16 row-span-2'>
+        <div className='min-w-[200px] max-w-[600px] mx-auto my-auto md:ml-16 row-span-2'>
           <Carousel images={project.images} />
         </div>
 
