@@ -34,14 +34,14 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
             <a
-              className="absolute xl:fixed p-2 left-5 top-3.5 bg-violet-300 dark:bg-gray-500 text-lg p-2 rounded-full"
+              className="absolute xl:fixed p-2 left-5 top-3.5 bg-gray-500 text-lg p-2 rounded-full"
               href={domainName}
               onMouseEnter={() => setIsArrowHovered(true)} // Set arrow hover state to true
               onMouseLeave={() => setIsArrowHovered(false)} // Set arrow hover state to false
             >
               <div className={`flex items-center justify-center text-white hover:animate-pulse ${isArrowHovered ? 'animate-pulse' : ''}`}>
                 <FiArrowLeft size={20} />
-                <p className='overflow-hidden'></p>Home
+                <p className='overflow-hidden mr-0.5'></p>Back
               </div>
             </a>
           </motion.div>
@@ -56,7 +56,7 @@ const Navbar = () => {
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link linkedin absolute 2xl:fixed right-[160px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link linkedin hover:text-blue-400 absolute 2xl:fixed right-[160px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
         <svg
             className="w-5 h-5 fill-current"
             role="img"
@@ -73,7 +73,7 @@ const Navbar = () => {
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link github absolute 2xl:fixed z-10 right-[115px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link github hover:text-blue-400 absolute 2xl:fixed z-10 right-[115px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -96,7 +96,7 @@ const Navbar = () => {
 
       <a
         onClick={() => copyToClipboard(emailAddress)}
-        className="social-link email absolute 2xl:fixed z-10 right-[205px] cursor-pointer bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link email hover:text-blue-400 absolute 2xl:fixed z-10 right-[205px] cursor-pointer bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" 
             width="20" height="20" 
             fill="currentColor" 
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       <a
         onClick={() => copyToClipboard(discordUsername)}
-        className="social-link discord absolute 2xl:fixed z-10 cursor-pointer right-[250px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link discord hover:text-blue-400 absolute 2xl:fixed z-10 cursor-pointer right-[250px] bg-gray-500 p-2 top-3.5 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" 
             width="20" height="20"
             className="w-5"

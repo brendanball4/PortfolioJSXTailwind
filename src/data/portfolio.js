@@ -23,7 +23,7 @@ export default [
         title_ext: 'Business Management System',
         desc: 'This project was co-developed by a colleague and I for a database class. It features a customer, invoicing, and inventory management system which includes creating and managing customers, invoicing, and inventory within the company.',
         images: ['PortfolioImages/Admin Web App/login.PNG', 'PortfolioImages/Admin Web App/custinfo.PNG', 'PortfolioImages/Admin Web App/custinfo2.PNG', 'PortfolioImages/Admin Web App/custadd.PNG', 'PortfolioImages/Admin Web App/invoiceinfo.PNG', 'PortfolioImages/Admin Web App/invoiceinfo2.PNG', 'PortfolioImages/Admin Web App/invoicelineitem.PNG'],
-        stack: ['HTML', 'CSS', 'PHP8.1', 'Bootstrap 4', 'MySQL'],
+        stack: ['PHP8.1', 'MySQL', 'Bootstrap 4', 'HTML/CSS'],
         link: 'https://github.com/cdmoss/3660-Project',
     },
     {

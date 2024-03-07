@@ -27,7 +27,7 @@ function Footer() {
                         <div className="flex justify-center gap-2">
                         <a
                             onClick={() => copyToClipboard(discordUsername)}
-                            className="bg-gray-500 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
+                            className="bg-gray-500 hover:text-blue-400 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="20" height="20"
                                 className="w-5"
@@ -40,7 +40,7 @@ function Footer() {
 
                         <a
                             onClick={() => copyToClipboard(emailAddress)}
-                            className="bg-gray-500 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
+                            className="bg-gray-500 hover:text-blue-400 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="20" height="20" 
                                 fill="currentColor" 
@@ -51,7 +51,7 @@ function Footer() {
                         </a>
                         <a 
                             href={linkedin}
-                            className="bg-gray-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                            className="bg-gray-500 p-2 hover:text-blue-400 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                             <svg
                             className="w-5 h-5 fill-current"
                             role="img"
@@ -66,7 +66,7 @@ function Footer() {
 
                         <a 
                             href={github}
-                            className="bg-gray-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                            className="bg-gray-500 p-2 hover:text-blue-400 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                             <svg
                             xmlns="http://www.w3.org/2000/svg"
                             xmlnsXlink="http://www.w3.org/1999/xlink"

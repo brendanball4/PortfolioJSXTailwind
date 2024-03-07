@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiArrowLeft, FiArrowRight, FiZoomIn } from 'react-icons/fi';
+import { FiZoomIn, FiXCircle, FiArrowLeftCircle, FiArrowRightCircle } from 'react-icons/fi';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,13 +65,13 @@ const Carousel = ({ images }) => {
           onClick={goToPrevious}
           className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 rounded-full"
         >
-          <FiArrowLeft className='h-6 w-6 text-black hover:text-stone-500' />
+          <FiArrowLeftCircle className='h-6 bg-gray-400 rounded-full w-6 text-black text-black hover:bg-gray-500' />
         </button>
         <button
           onClick={goToNext}
           className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 rounded-full"
         >
-          <FiArrowRight className='h-6 w-6 text-black hover:text-stone-500' />
+          <FiArrowRightCircle className='h-6 w-6 bg-gray-400 rounded-full text-black text-black hover:bg-gray-500' />
         </button>
       </div>
 
@@ -82,7 +82,7 @@ const Carousel = ({ images }) => {
   onClick={closeModal}
   >
   <div
-    className="relative bg-white p-4 rounded-lg shadow-lg max-w-[200px] xl:max-w-[1000px] 2-xl:max-w-[300px] mx-auto my-auto"
+    className="relative bg-white p-4 rounded-lg shadow-lg max-w-[950px] xl:max-w-[1500px] 2-xl:max-w-[300px] mx-auto my-auto"
     onClick={(e) => e.stopPropagation()}
   >
       {/* Modal navigation arrows */}
@@ -90,13 +90,20 @@ const Carousel = ({ images }) => {
         onClick={goToPreviousModalImage}
         className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-5 rounded-full z-10"
       >
-        <FiArrowLeft className='h-6 w-6 text-black hover:text-stone-500' />
+        <FiArrowLeftCircle className='h-8 bg-gray-400 rounded-full w-8 text-black text-black hover:bg-gray-500' />
       </button>
       <button
         onClick={goToNextModalImage}
         className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-5 rounded-full z-10"
       >
-        <FiArrowRight className='h-6 w-6 text-black hover:text-stone-500' />
+        <FiArrowRightCircle className='h-8 bg-gray-400 rounded-full w-8 text-black text-black hover:bg-gray-500' />
+      </button>
+
+      <button
+        onClick={closeModal}
+        className="absolute right-2 top-12 transform -translate-y-1/2 text-white p-5 rounded-full z-10"
+      >
+        <FiXCircle className='h-12 bg-gray-400 rounded-full w-12 text-black hover:bg-gray-500' />
       </button>
 
       {/* Enlarged Image with fixed width and auto height */}
