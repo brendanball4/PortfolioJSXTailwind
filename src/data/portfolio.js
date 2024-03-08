@@ -12,9 +12,9 @@ export default [
         id: 2,
         title: 'Developer Portfolio',
         title_ext: 'Developer Portfolio Web Application',
-        desc: 'This project was solo developed by me to create a proper way to express myself and my accomplishments to future employers.',
+        desc: 'This project was solo developed by me to create a proper way to express myself and my accomplishments to future employers. This was created using React, Vite, and Tailwind. This project was a challenge for myself to keep up to date with latest technology. This website is hosted on a Raspberry Pi running a webserver.',
         images: ['PortfolioImages/Dev Portfolio/top_dark.PNG', 'PortfolioImages/Dev Portfolio/top_light.PNG', 'PortfolioImages/Dev Portfolio/time_dark.PNG', 'PortfolioImages/Dev Portfolio/time_light.PNG'],
-        stack: ['JSX/React', 'Tailwind', 'Vite'],
+        stack: ['JSX/React', 'Tailwind', 'Vite', 'Raspberry Pi'],
         link: 'https://github.com/brendanball4/PortfolioJSXTailwind',
     },
     {
