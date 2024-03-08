@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/scroll";
 import ProjectPage from "./pages/projects";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
 	const [backToTop, setBackToTop] = useState(false);
@@ -93,16 +93,7 @@ function App() {
 				</>
 			} />
 			<Route path="/project/:id" element={<ProjectPage />} />
-			<Route path="*" element={
-				<>
-				{/* Your main page components */}
-				<Intro />
-				<Portfolio />
-				<Timeline />
-				<Contact />
-				<ScrollToTopButton />
-				</>
-			} />
+			<Route path="*" element={<Navigate to="/" replace />} />
 			{/* Define other routes as needed */}
 			</Routes>
 		</div>
