@@ -12,7 +12,7 @@ function ProjectPage() {
     <div>
       <AnimatePresence>
         <motion.div
-          className="fixed mb-2 mr-2 z-50"
+          className="absolute xl:fixed mb-2 mr-2 z-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}>
