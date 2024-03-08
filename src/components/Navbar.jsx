@@ -1,13 +1,6 @@
 import { discordUsername, emailAddress, linkedin, github } from '../constants/constants';
-import { FiArrowLeft } from 'react-icons/fi';
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isArrowHovered, setIsArrowHovered] = useState(false);
-
-  const isProjectPage = window.location.href.includes('project');
 	const copyToClipboard = (text) => {
 	  navigator.clipboard.writeText(text).then(
 		() => {
@@ -27,32 +20,6 @@ const Navbar = () => {
 
   return (
     <>
-      {isProjectPage ? (
-        <AnimatePresence>
-          <motion.div
-            className="fixed bottom-5 right-0 mb-2 mr-2 z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}>
-            <Link
-              className="absolute xl:fixed p-2 left-5 top-3.5 bg-gray-500 text-lg p-2 rounded-full"
-              to="/"
-              onMouseEnter={() => setIsArrowHovered(true)} // Set arrow hover state to true
-              onMouseLeave={() => setIsArrowHovered(false)} // Set arrow hover state to false
-            >
-              <div className={`flex items-center justify-center text-white hover:animate-pulse ${isArrowHovered ? 'animate-pulse' : ''}`}>
-                <FiArrowLeft size={20} />
-                <p className='overflow-hidden mr-0.5'></p>Back
-              </div>
-            </Link>
-          </motion.div>
-      </AnimatePresence>
-        ) : (
-          // Content for other pages
-          <div></div>
-        )}
-
-
       <a
         href={linkedin}
         target="_blank"

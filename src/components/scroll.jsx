@@ -39,7 +39,7 @@ const ScrollToTopButton = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}>
           <button
-            className="fixed p-2 right-10 hover:text-white dark:hover:text-blue-400 bottom-4 bg-violet-300 dark:bg-gray-600 text-lg p-5 rounded-3xl"
+            className="fixed p-2 right-10 hover:text-white hidden md:block dark:hover:text-blue-400 bottom-4 bg-violet-300 dark:bg-gray-600 text-lg p-5 rounded-3xl"
             onClick={scrollTop}
             onMouseEnter={() => setIsArrowHovered(true)} // Set arrow hover state to true
             onMouseLeave={() => setIsArrowHovered(false)} // Set arrow hover state to false

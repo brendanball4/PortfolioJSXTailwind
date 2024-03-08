@@ -12,10 +12,9 @@ function Portfolio() {
                {portfolio.map(project => (
                   <PortfolioItem 
                      id={project.id}
-                     images={project.images}
                      title={project.title}
-                     stack={project.stack}
-                     link={project.link}
+                     images={project.images}
+                     mini_desc={project.mini_desc}
                   />
                ))}
             </div>
