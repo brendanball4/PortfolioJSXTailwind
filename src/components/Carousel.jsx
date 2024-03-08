@@ -4,7 +4,9 @@ import { FiZoomIn, FiXCircle, FiArrowLeftCircle, FiArrowRightCircle } from 'reac
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
+
+  const getImagePath = (imageName) => `${process.env.PUBLIC_URL}/assets/${imageName}`;
 
   // Go to previous image
   const goToPrevious = () => {
@@ -50,11 +52,11 @@ const Carousel = ({ images }) => {
         {/* Adjusted Image Container */}
         <div className="relative w-full h-full">
 
-              <img
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
-              className="w-full h-full object-cover cursor-pointer group-hover:opacity-75"
-            />
+          <img
+            src={getImagePath(images[currentIndex])} // Adjust the src attribute
+            alt={`Slide ${currentIndex + 1}`}
+            className="w-full h-full object-cover cursor-pointer group-hover:opacity-75"
+          />
           <div onClick={openModal} className="absolute inset-0 flex justify-center cursor-pointer items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             <FiZoomIn className="text-white text-6xl" />
           </div>
