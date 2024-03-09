@@ -31,7 +31,7 @@ export default [
     },
     {
         id: 4,
-        title: 'Dark Souls-like created with Unity',
+        title: 'Souls-like created with Unity',
         title_ext: 'Unity Engine Game Development',
         mini_desc: 'This is my personal game development project for a darksouls-like game. The art/animations were created in Blender. Scripts coded using C#.',
         desc: 'There are a couple notable projects worked on over the years. I have worked on a dark souls-like game, and I also worked on a rogue-like game using basic assets all hand created in microsoft paint! None of the projects worked on are currently finished, but I learned a lot about Unity in the process.',

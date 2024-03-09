@@ -8,8 +8,8 @@ function PortfolioItem({ id, title, images, mini_desc }) {
    <div className="border-2 border-stone-900 dark:border-stone-400 rounded-md overflow-hidden relative">
       <Carousel images={images} />
          <div className="w-full p-4">
-            <h3 className="flex flex-row justify-context text-lg md:text-xl dark:text-white text-black mb-2 md:mb-3 font-semibold">{title}</h3>
-            <p className="mb-8">
+            <h3 className="flex flex-row justify-context text-lg md:text-xl dark:text-white text-black mb-1.5 font-semibold">{title}</h3>
+            <p className="mb-10 md:mb-8">
                {mini_desc}
             </p>
             <Link className="absolute bottom-2 left-3 text-lg md:text-2xl hover:text-blue-500"
