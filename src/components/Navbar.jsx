@@ -24,7 +24,7 @@ const Navbar = () => {
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link linkedin hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed right-[160px] p-2 top-3.5 font-semibold text-blue-400 dark:text-orange-300 inline-flex items-center space-x-2 rounded-full">
+        className="social-link linkedin hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed right-[160px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg
             className="w-5 h-5 fill-current"
             role="img"
@@ -41,7 +41,7 @@ const Navbar = () => {
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link github hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[115px] p-2 top-3.5 font-semibold text-blue-400 dark:text-orange-300 inline-flex items-center space-x-2 rounded-full">
+        className="social-link github hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[115px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -64,7 +64,7 @@ const Navbar = () => {
 
       <a
         onClick={() => copyToClipboard(emailAddress)}
-        className="social-link email hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[205px] cursor-pointer p-2 top-3.5 font-semibold text-blue-400 dark:text-orange-300 inline-flex items-center space-x-2 rounded-full">
+        className="social-link email hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[205px] cursor-pointer p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" 
             width="20" height="20" 
             fill="currentColor" 
@@ -76,7 +76,7 @@ const Navbar = () => {
 
       <a
         onClick={() => copyToClipboard(discordUsername)}
-        className="social-link discord hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[250px] p-2 top-3.5 font-semibold text-violet-300 dark:text-orange-300 inline-flex items-center space-x-2 rounded-full">
+        className="social-link discord hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[250px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" 
             width="20" height="20"
             className="bi bi-discord w-5"

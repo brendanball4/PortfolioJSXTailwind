@@ -53,7 +53,7 @@ const Carousel = ({ images }) => {
               <img
               src={images[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
-              className="border-b-2 border-black dark:border-stone-300 w-full h-full object-cover group-hover:opacity-50 dark:group-hover:opacity-75"
+              className="w-full h-full object-cover group-hover:opacity-50 dark:group-hover:opacity-75"
             />
           <div onClick={openModal} className="absolute inset-0 flex justify-center cursor-pointer items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             <FiZoomIn className="dark:text-white text-6xl" />

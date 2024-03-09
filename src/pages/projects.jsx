@@ -17,14 +17,14 @@ function ProjectPage() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}>
           <Link
-            className="absolute xl:fixed top-3.5 xl:left-4 bg-gray-500 text-lg p-2 rounded-full"
+            className="absolute xl:fixed top-3.5 xl:left-4 text-lg p-2 rounded-full"
             to="/"
             onMouseEnter={() => setIsArrowHovered(true)} // Set arrow hover state to true
             onMouseLeave={() => setIsArrowHovered(false)} // Set arrow hover state to false
           >
-            <div className={`flex items-center justify-center text-white hover:animate-pulse ${isArrowHovered ? 'animate-pulse' : ''}`}>
+            <div className={`flex items-center justify-center text-black dark:text-white hover:animate-pulse ${isArrowHovered ? 'animate-pulse' : ''}`}>
               <FiArrowLeft size={20} />
-              <p className='overflow-hidden mr-0.5'></p>Back
+              <p className='overflow-hidden ml-0.5'>Back</p>
             </div>
           </Link>
         </motion.div>
