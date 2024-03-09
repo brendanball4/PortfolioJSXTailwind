@@ -6,22 +6,24 @@ const Carousel = ({ images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const imageUrls = images.map(path => new URL(`../PortfolioImages/${path}`, import.meta.url).href);
+
   // Go to previous image
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? imageUrls.length - 1 : prevIndex - 1
     );
   };
 
   // Go to next image
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === imageUrls.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const openModal = () => {
-    setSelectedImage(images[currentIndex]);
+    setSelectedImage(imageUrls[currentIndex]);
     setIsModalOpen(true);
   };
 
@@ -32,16 +34,16 @@ const Carousel = ({ images }) => {
   
   // Go to previous image inside modal
   const goToPreviousModalImage = () => {
-    const isFirstImage = selectedImage === images[0];
-    const newIndex = isFirstImage ? images.length - 1 : images.indexOf(selectedImage) - 1;
-    setSelectedImage(images[newIndex]);
+    const isFirstImage = selectedImage === imageUrls[0];
+    const newIndex = isFirstImage ? imageUrls.length - 1 : imageUrls.indexOf(selectedImage) - 1;
+    setSelectedImage(imageUrls[newIndex]);
   };
 
   // Go to next image inside modal
   const goToNextModalImage = () => {
-    const isLastImage = selectedImage === images[images.length - 1];
-    const newIndex = isLastImage ? 0 : images.indexOf(selectedImage) + 1;
-    setSelectedImage(images[newIndex]);
+    const isLastImage = selectedImage === imageUrls[images.length - 1];
+    const newIndex = isLastImage ? 0 : imageUrls.indexOf(selectedImage) + 1;
+    setSelectedImage(imaimageUrlsges[newIndex]);
   };
 
   return (
@@ -51,7 +53,7 @@ const Carousel = ({ images }) => {
         <div className="relative w-full h-full">
 
               <img
-              src={images[currentIndex]}
+              src={imageUrls[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
               className="w-full h-full object-cover group-hover:opacity-50 dark:group-hover:opacity-75"
             />
