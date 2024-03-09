@@ -1,6 +1,6 @@
 import React from 'react';
 import me from '/PortfolioImages/Personal/me.jpg'
-import { TypeAnimation } from 'react-type-animation';
+import TypeAnimation from 'react-type-animation';
 
 function Intro() {
     const ExampleComponent = () => {
