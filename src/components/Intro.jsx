@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '/PortfolioImages/Personal/me.jpg'
+import me from '../PortfolioImages/me.jpg'
 //import TypeAnimation from 'react-type-animation';
 
 function Intro() {
@@ -32,10 +32,7 @@ function Intro() {
     return (
         <div className="pt-20 pb-6 flex justify-center items-center flex-col md:flex-row">
             <div class="justify-center items-center w-68 h-64 overflow-hidden rounded-[100px] md:rounded-full mb-4 md:mb-0 md:rounded-full shadow-lg md:hover:scale-110 transition-transform duration-300 ease-in-out">
-                <img src={me}
-                    alt="Picture of me" 
-                    class="w-full h-full object-cover">
-                </img>
+                <img src={me} className='w-full h-full object-cover' alt="Picture of me with a dog"/>
             </div>
 
             <div className='md:ml-12 basis-2/3 text-center md:text-left'>

@@ -13,10 +13,6 @@ const ProjectItem = () => {
   // Find the project with the given ID
   const project = projects.find(project => project.id === projectId);
 
-  for (let index = 0; index < project.images.length; index++) {
-    project.images[index] = '../' + project.images[index];
-  }
-
   if (!project) {
     return <div className=''>
                 <h1 className='text-red-400 underline text-2xl'>Project not found!</h1>
