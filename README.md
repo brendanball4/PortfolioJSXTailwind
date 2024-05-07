@@ -3,4 +3,4 @@
 
 ### Image preview of the website
 
-![Alt text](public/assets/images/gitreadme.png?raw=true "Portfolio Website")
+![Alt text]([public/assets/images/gitreadme.png?raw=true "Portfolio Website"](https://imgur.com/d9mrgNW))
