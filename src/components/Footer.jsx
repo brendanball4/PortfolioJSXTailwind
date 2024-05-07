@@ -23,8 +23,7 @@ function Footer() {
         <footer className='bg-gray-800 text-white p-4 w-full'>
             <div className='py-5 text-center text-white mt-auto'>
                 <div className="container mx-auto px-4">
-                    <div>
-                        <div className="flex justify-center gap-2">
+                    <div className="flex justify-center gap-2">
                         <a
                             onClick={() => copyToClipboard(discordUsername)}
                             className="hover:text-violet-300 p-2 font-semibold cursor-pointer text-white inline-flex items-center space-x-2 rounded-full">
@@ -86,7 +85,6 @@ function Footer() {
                             </g>
                             </svg>
                         </a>
-                        </div>
                     </div>
                 </div>
             </div>

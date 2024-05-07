@@ -87,24 +87,24 @@ const Carousel = ({ images }) => {
           event.stopPropagation();
           goToPreviousModalImage();
         }}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-5 rounded-full z-60"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-5 rounded-full z-50"
       >
-        <FiArrowLeft className='h-10 bg-black dark:bg-white rounded-full w-10 text-white dark:text-black dark:hover:text-white dark:hover:bg-black transition-colors duration-150 ease-in hover:text-black hover:bg-white' />
+        <FiArrowLeft className='h-10 bg-black dark:bg-white rounded-full w-10 text-white dark:text-black dark:hover:text-white dark:hover:bg-black transition-colors duration-150 ease-in hover:text-black hover:bg-white z-50' />
       </button>
       <button
          onClick={(event) => {
           event.stopPropagation();
           goToNextModalImage();
         }}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-5 rounded-full z-60"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-5 rounded-full z-50"
       >
-        <FiArrowRight className='h-10 bg-black dark:bg-white rounded-full w-10 text-white dark:text-black dark:hover:text-white dark:hover:bg-black transition-colors duration-150 ease-in hover:text-black hover:bg-white' />
+        <FiArrowRight className='h-10 bg-black dark:bg-white rounded-full w-10 text-white dark:text-black dark:hover:text-white dark:hover:bg-black transition-colors duration-150 ease-in hover:text-black hover:bg-white z-50' />
       </button>
       <button
         onClick={closeModal}
-        className="absolute right-2 top-12 transform -translate-y-1/2 text-white p-5 rounded-full z-10"
+        className="absolute right-2 top-12 transform -translate-y-1/2 text-white p-5 rounded-full z-50"
       >
-        <FiX className='h-12 bg-black rounded-full w-12 text-white dark:text-black dark:bg-white dark:hover:bg-black dark:hover:text-white transition-colors duration-150 ease-in hover:text-black hover:bg-white' />
+        <FiX className='h-12 bg-black rounded-full w-12 text-white dark:text-black dark:bg-white dark:hover:bg-black dark:hover:text-white transition-colors duration-150 ease-in hover:text-black hover:bg-white z-50' />
       </button>
   <div
     className="relative bg-white p-4 rounded-lg shadow-lg max-w-[950px] xl:max-w-[1500px] 2-xl:max-w-[300px] mx-auto my-auto"

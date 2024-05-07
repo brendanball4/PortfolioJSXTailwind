@@ -1,12 +1,22 @@
 export default [
     {
+        id: 0,
+        title: 'Triple Dashboard Practicum Management Web Application',
+        title_ext: 'Admin, Student, and Employer Practicum Management Web Application',
+        mini_desc: 'This system was designed for the Lethbridge College Practicum program. This system features many systems such as, student and employer management, completable forms, timesheets, and more!',
+        desc: 'Using ASP.NET Core with Razor Pages following the MVC model, we created an application that successfully allows for three types of users to access the system. The admin, student, and the employer. They weave in with eachother with certain features such as the timesheets, forms, and student/employer management. They are first met with a dashboard, but each have their own features. The main interaction in this system is the: Job postings, Forms, and Timesheets.',
+        images: ['https://i.imgur.com/1gm6nR9.png', 'https://i.imgur.com/dElJtvH.png', 'https://i.imgur.com/wQFUkMC.png', 'https://i.imgur.com/B1bpfno.png', 'https://i.imgur.com/g9CS7qj.png', 'https://i.imgur.com/HsQvdfA.png', 'https://i.imgur.com/F2OTKEB.png', 'https://i.imgur.com/Vr0OIej.png'],
+        stack: ['C#', 'ASP.NET Core 6', 'MVC', 'Razor Pages', 'EF Core 6', 'MSSQL', 'Bootstrap 5'],
+        link: 'https://github.com/Diazrob/CITPracticum'
+    },
+    {
         id: 1,
-        title: 'HR Web App',
+        title: 'HR Admin & Volunteer Management System',
         title_ext: 'HR Admin & Volunteer Management System',
         mini_desc: 'This system was designed for business management, allowing schedule and volunteer management, built using C#, .NET Core, Blazor Server, and more!',
         desc: 'This system was designed for business management, featuring a dual-dashboard system. One dashboard allows administrators to handle volunteer coordination and scheduling effectively. The other dashboard allows volunteers to adjust their availability, shift applications, and communicate with the organization. The tech stack for this project includes C#, using the .NET Core framework, and utilizes Blazor Server for creating interactive user interfaces.',
         images: ['https://i.imgur.com/kTktNk6.png', 'https://i.imgur.com/T6qFccg.png', 'https://i.imgur.com/AW7Xg5J.png', 'https://i.imgur.com/s45a0yX.png', 'https://i.imgur.com/APa65oJ.png', 'https://i.imgur.com/nXazCE9.png', 'https://i.imgur.com/YexQx6b.png'],
-        stack: [ 'C#', 'Blazor', 'Bootstrap 4', 'Entity Framework', 'MariaDB', 'Docker', 'HTML/CSS'],
+        stack: [ 'C#', 'Blazor', 'Bootstrap 4', 'Entity Framework', 'MariaDB', 'Docker'],
         link: 'https://github.com/cdmoss/hrmanager-blazorapp',
     },
     {
@@ -32,11 +42,11 @@ export default [
     {
         id: 4,
         title: 'Souls-like created with Unity',
-        title_ext: 'Unity Engine Game Development',
+        title_ext: 'Souls-like created with Unity',
         mini_desc: 'This is my personal game development project for a darksouls-like game. The art/animations were created in Blender. Scripts coded using C#.',
-        desc: 'There are a couple notable projects worked on over the years. I have worked on a dark souls-like game, and I also worked on a rogue-like game using basic assets all hand created in microsoft paint! None of the projects worked on are currently finished, but I learned a lot about Unity in the process.',
+        desc: 'There are a couple notable projects worked on over the years. I have worked on a dark souls-like game, and I also worked on a rogue-like game using basic 2D assets all hand created in microsoft paint! None of the projects worked on are currently finished, but I learned a lot about Unity in the process.',
         images: ['https://i.imgur.com/BDsCbKu.png'],
-        stack: ['C#', 'C++', 'Unity Game Engine', 'Unreal Engine (UE4)', '3D Modelling', 'Graphic Design', 'System Design', 'Game Design'],
+        stack: ['C#', 'Unity Game Engine', '3D Modelling', 'Graphic Design', 'System Design', 'Game Design'],
         link: 'https://github.com/brendanball4/DSTut',
     },
     {
