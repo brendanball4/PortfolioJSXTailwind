@@ -1,6 +1,6 @@
 // TypewriterEffect.js
 import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from '../../node_modules/react-simple-typewriter';
 
 const TypewriterEffect = () => {
   return (
