@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from "./Title";
-import techstack from '../data/Techstack';
+import techstack from '../data/techstack';
 import TechstackItem from './TechstackItem';
 
 function Techstack() {
