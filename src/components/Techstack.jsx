@@ -10,7 +10,6 @@ function Techstack() {
             <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
                {techstack.map(stack => (
                   <TechstackItem 
-                     id={stack.id}
                      stack_name={stack.stack_name}
                      img_url={stack.img_url}
                   />

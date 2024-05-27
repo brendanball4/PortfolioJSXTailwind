@@ -1,6 +1,6 @@
 import React from "react";
 
-function TechstackItem({ id, stack_name, img_url }) {
+function TechstackItem({ stack_name, img_url }) {
     return (
    <div>
         <div className="text-center">
