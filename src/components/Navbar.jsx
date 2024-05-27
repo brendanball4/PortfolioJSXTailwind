@@ -8,7 +8,7 @@ const Navbar = () => {
 				alert('Discord username copied to clipboard! Send me a friend/message request on Discord and we\'ll connect from there!');
 			} else if (text == emailAddress){
 				if (window.confirm('Email address copied to clipboard! Click \'OK\' to open your default email application or \'Cancel\' to decline. Continue?')) {
-					window.location.href = `mailto:{emailAddress}`;
+					window.location.href = `mailto:${emailAddress}`;
 				}
 			}
 		},
@@ -24,7 +24,7 @@ const Navbar = () => {
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link linkedin hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed right-[265px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link linkedin hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed right-[240px] sm:right-[265px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg
             className="w-5 h-5 fill-current"
             role="img"
@@ -41,7 +41,7 @@ const Navbar = () => {
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link github hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[225px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link github hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[200px] sm:right-[225px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -64,7 +64,7 @@ const Navbar = () => {
 
       <a
         onClick={() => copyToClipboard(emailAddress)}
-        className="social-link email hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[305px] cursor-pointer p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link email hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[280px] sm:right-[305px] cursor-pointer p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" 
             width="20" height="20" 
             fill="currentColor" 
@@ -77,7 +77,7 @@ const Navbar = () => {
 
       <a
         onClick={() => copyToClipboard(discordUsername)}
-        className="social-link discord hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[345px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link discord hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[320px] sm:right-[345px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" 
             width="20" height="20"
             className="bi bi-discord w-5"
@@ -90,7 +90,7 @@ const Navbar = () => {
       <a
         href='https://drive.google.com/file/d/1tRoYPA1ESt0RxuEwkkfav0zkaysUkVWk/view?usp=sharing'
         target='_blank'
-        className="social-link resume hover:text-orange-300 bg-stone-500 dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[115px] p-2 top-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        className="social-link resume hover:text-orange-300 bg-stone-500 dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[100px] sm:right-[115px] p-2 top-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
         <svg width={25} height={25} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
         </svg>
