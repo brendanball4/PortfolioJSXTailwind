@@ -8,6 +8,7 @@ import ScrollToTopButton from "./components/scroll";
 import ProjectPage from "./pages/projects";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Techstack from "./components/Techstack";
 
 function App() {
 	const [backToTop, setBackToTop] = useState(false);
@@ -86,6 +87,7 @@ function App() {
 				<>
 				{/* Your main page components */}
 				<Intro />
+				<Techstack />
 				<Portfolio />
 				<Timeline />
 				<Contact />
