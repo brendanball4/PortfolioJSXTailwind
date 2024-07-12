@@ -23,12 +23,4 @@ export default [
         stack_name: 'Bootstrap',
         img_url: ['https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/bootstrap.svg']
     },
-    {
-        stack_name: 'Tailwind CSS',
-        img_url: ['https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tailwindcss.svg']
-    },
-    {
-        stack_name: 'Blender',
-        img_url: ['https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/blender.svg']
-    },
     ]

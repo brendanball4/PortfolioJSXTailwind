@@ -88,7 +88,7 @@ const Navbar = () => {
       </a>
 
       <a
-        href='https://drive.google.com/file/d/1tRoYPA1ESt0RxuEwkkfav0zkaysUkVWk/view?usp=sharing'
+        href='https://drive.google.com/file/d/1sczKlrDDJC-DpQnscWCRshG7AaO7QTmu/view?usp=sharing'
         target='_blank'
         className="social-link resume hover:text-orange-300 bg-stone-500 dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[100px] sm:right-[115px] p-2 top-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
         <svg width={25} height={25} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

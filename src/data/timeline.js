@@ -1,11 +1,5 @@
 export default [
     {
-        year: "2023-2024",
-        title: "Full-stack Developer @ LC",
-        duration: "6 months",
-        details: "I created a 3 Dashboard practicum management system for the Lethbridge College CIT practicum program.",
-    },
-    {
         year: "2024",
         title: "Graduated Computer Science",
         duration: "4 years",

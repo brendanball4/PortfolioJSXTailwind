@@ -1,15 +1,5 @@
 export default [
     {
-        id: 0,
-        title: 'Triple Dashboard Practicum Management Web Application',
-        title_ext: 'Admin, Student, and Employer Practicum Management Web Application',
-        mini_desc: 'This system was designed for the Lethbridge College Practicum program. This system features many systems such as, student and employer management, completable forms, timesheets, and more!',
-        desc: 'Using ASP.NET Core with Razor Pages following the MVC model, we created an application that successfully allows for three types of users to access the system. The admin, student, and the employer. They weave in with eachother with certain features such as the timesheets, forms, and student/employer management. They are first met with a dashboard, but each have their own features. The main interaction in this system is the: Job postings, Forms, and Timesheets.',
-        images: ['https://i.imgur.com/1gm6nR9.png', 'https://i.imgur.com/dElJtvH.png', 'https://i.imgur.com/wQFUkMC.png', 'https://i.imgur.com/B1bpfno.png', 'https://i.imgur.com/g9CS7qj.png', 'https://i.imgur.com/HsQvdfA.png', 'https://i.imgur.com/F2OTKEB.png', 'https://i.imgur.com/Vr0OIej.png'],
-        stack: ['C#', 'ASP.NET Core 6', 'MVC', 'Razor Pages', 'EF Core 6', 'MSSQL', 'Bootstrap 5'],
-        link: 'https://github.com/Diazrob/CITPracticum'
-    },
-    {
         id: 1,
         title: 'HR Admin & Volunteer Management System',
         title_ext: 'HR Admin & Volunteer Management System',
