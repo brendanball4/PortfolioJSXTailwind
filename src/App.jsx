@@ -6,9 +6,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/scroll";
 import ProjectPage from "./pages/projects";
+import ProgrammingPage from "./pages/programming";
+import DatabasePage from "./pages/databases";
+import SkillsPage from "./pages/skills";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Techstack from "./components/Techstack";
+import Skills from "./data/skills";
 
 function App() {
 	const [backToTop, setBackToTop] = useState(false);
@@ -95,6 +99,9 @@ function App() {
 				</>
 			} />
 			<Route path="/project/:id" element={<ProjectPage />} />
+			<Route path="/programming" element={<ProgrammingPage />} />
+			<Route path="/databases" element={<DatabasePage />} />
+			<Route path="/skills" element={<SkillsPage />} />
 			<Route path="*" element={<Navigate to="/" replace />} />
 			{/* Define other routes as needed */}
 			</Routes>

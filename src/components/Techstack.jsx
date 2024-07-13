@@ -81,7 +81,7 @@ function Techstack() {
                     <div className="p-4">
                         <Link className="text-lg md:text-2xl hover:text-blue-500"
                             rel="noopener noreferrer"
-                            to={`styling-frameworks`}>
+                            to={`skills`}>
                             <p className="text-lg pl-3 pr-3 hover:bg-blue-400 hover:border-black dark:hover:border-black dark:hover:text-black hover:text-black border-blue-700 dark:border-blue-900 border-2 rounded-full text-blue-700 dark:text-blue-400 flex items-center">
                                 Learn more
                                 <FaLongArrowAltRight className="ml-1" size={20} />
