@@ -1,6 +1,26 @@
 export default [
     {
         id: 1,
+        title: 'Medicine Hat College Solar Monitoring',
+        title_ext: 'Solar Car Canopy Monitoring System',
+        mini_desc: 'This platform consolidates solar energy data from multiple sources, offering real-time insights and efficient management, powered by C#, .NET Core, and Blazor Server.',
+        desc: 'This advanced solar energy platform brings together data from multiple solar arrays, delivering real-time analytics and management capabilities. Developed with C#, .NET Core, and Blazor Server, the system leverages MudBlazor for a sleek and responsive UI, EF Core for robust data management, and Selenium for seamless web automation.',
+        images: ['https://i.imgur.com/sR1vkMl.png', 'https://i.imgur.com/I9xxsUD.png'],
+        stack: [ 'C#', 'Blazor Server', 'MudBlazor', 'EF Core 6', 'MSSQL', 'Azure Cloud Hosting'],
+        link: 'https://solar-mhc-fwa9d2e7c6dna7c7.eastus-01.azurewebsites.net/',
+    },
+    {
+        id: 2,
+        title: 'Triple Dashboard Practicum Management Web Application',
+        title_ext: 'Admin, Student, and Employer Practicum Management Web Application',
+        mini_desc: 'This system was designed for the Lethbridge College Practicum program. This system features many systems such as, student and employer management, completable forms, timesheets, and more!',
+        desc: 'Using ASP.NET Core with Razor Pages following the MVC model, we created an application that successfully allows for three types of users to access the system. The admin, student, and the employer. They weave in with eachother with certain features such as the timesheets, forms, and student/employer management. They are first met with a dashboard, but each have their own features. The main interaction in this system is the: Job postings, Forms, and Timesheets.',
+        images: ['https://i.imgur.com/1gm6nR9.png', 'https://i.imgur.com/dElJtvH.png', 'https://i.imgur.com/wQFUkMC.png', 'https://i.imgur.com/B1bpfno.png', 'https://i.imgur.com/g9CS7qj.png', 'https://i.imgur.com/HsQvdfA.png', 'https://i.imgur.com/F2OTKEB.png', 'https://i.imgur.com/Vr0OIej.png'],
+        stack: ['C#', 'ASP.NET Core 6', 'MVC', 'Razor Pages', 'EF Core 6', 'MSSQL', 'Bootstrap 5'],
+        link: 'https://github.com/Diazrob/CITPracticum'
+    },
+    {
+        id: 3,
         title: 'HR Admin & Volunteer Management System',
         title_ext: 'HR Admin & Volunteer Management System',
         mini_desc: 'This system was designed for business management, allowing schedule and volunteer management, built using C#, .NET Core, Blazor Server, and more!',
@@ -10,7 +30,7 @@ export default [
         link: 'https://github.com/cdmoss/hrmanager-blazorapp',
     },
     {
-        id: 2,
+        id: 4,
         title: 'Developer Portfolio',
         title_ext: 'Developer Portfolio Web Application',
         mini_desc: 'This website was designed as my personal portfolio for personal gain, and for future employers. It was built using React/JSX, Vite, and Tailwind CSS.',
@@ -20,7 +40,7 @@ export default [
         link: 'https://github.com/brendanball4/PortfolioJSXTailwind',
     },
     {
-        id: 3,
+        id: 5,
         title: 'Business Management System',
         title_ext: 'Business Management System',
         mini_desc: 'This system was designed for business management, allowing customer, stock, and invoice management. It was built using PHP8.1, MySQL, and Bootstrap 4.',
@@ -30,7 +50,7 @@ export default [
         link: 'https://github.com/cdmoss/3660-Project',
     },
     {
-        id: 4,
+        id: 6,
         title: 'Souls-like created with Unity',
         title_ext: 'Souls-like created with Unity',
         mini_desc: 'This is my personal game development project for a darksouls-like game. The art/animations were created in Blender. Scripts coded using C#.',
@@ -40,7 +60,7 @@ export default [
         link: 'https://github.com/brendanball4/DSTut',
     },
     {
-        id: 5,
+        id: 7,
         title: 'Graphic Design & 3D Modelling',
         title_ext: 'Graphic Design & 3D Modelling using Blender',
         mini_desc: 'This endeavor was pursued out of interest in game development, however I found interest in 3D modelling along the way. The art was all created in Blender.',

@@ -20,21 +20,11 @@ function Techstack() {
                             ))}
                         </div>
                         <div className="text-gray-700 flex-grow">
-                            <div className="font-bold text-xl mb-2">Programming Languages</div>
+                            <div className="font-bold text-xl mb-2">Development & Styling Tools</div>
                             <p className="text-base">
-                                I have experience with the above programming languages and styling frameworks.
+                                Proficient in a diverse set of programming languages and frameworks, enabling flexible and effective software solutions.
                             </p>
                         </div>
-                    </div>
-                    <div className="p-4">
-                        <Link className="text-lg md:text-2xl hover:text-blue-500"
-                            rel="noopener noreferrer"
-                            to={`programming`}>
-                            <p className="text-lg pl-3 pr-3 hover:bg-blue-400 hover:border-black dark:hover:border-black dark:hover:text-black hover:text-black border-blue-700 dark:border-blue-900 border-2 rounded-full text-blue-700 dark:text-blue-400 flex items-center">
-                                Learn more
-                                <FaLongArrowAltRight className="ml-1" size={20} />
-                            </p>
-                        </Link>
                     </div>
                 </div>
 
@@ -46,21 +36,11 @@ function Techstack() {
                             ))}
                         </div>
                         <div className="text-gray-700 flex-grow" style={ {paddingTop: '102px'} }>
-                            <div className="font-bold text-xl mb-2">Databases</div>
+                            <div className="font-bold text-xl mb-2">Database Systems</div>
                             <p className="text-base">
-                                I have experience with the above database softwares.
+                                Skilled in managing and optimizing databases, ensuring reliable and efficient data storage.
                             </p>
                         </div>
-                    </div>
-                    <div className="p-4">
-                        <Link className="text-lg md:text-2xl hover:text-blue-500"
-                            rel="noopener noreferrer"
-                            to={`databases`}>
-                            <p className="text-lg pl-3 pr-3 hover:bg-blue-400 hover:border-black dark:hover:border-black dark:hover:text-black hover:text-black border-blue-700 dark:border-blue-900 border-2 rounded-full text-blue-700 dark:text-blue-400 flex items-center">
-                                Learn more
-                                <FaLongArrowAltRight className="ml-1" size={20} />
-                            </p>
-                        </Link>
                     </div>
                 </div>
 
@@ -71,22 +51,12 @@ function Techstack() {
                                 <TechstackItem img_url={stack.img_url} key={stack.img_url} />
                             ))}
                         </div>
-                        <div className="text-gray-700 flex-grow" style={ {paddingTop: '102px'} }>
-                            <div className="font-bold text-xl mb-2">Skills</div>
+                        <div className="text-gray-700 flex-grow" style={ {paddingTop: '0px'} }>
+                            <div className="font-bold text-xl mb-2">Technical Expertise & Tools</div>
                             <p className="text-base">
-                                These are some skills I've picked up along the way when creating my projects.
+                                Mastered cutting-edge tools and technologies, consistently delivering innovative and impactful solutions.
                             </p>
                         </div>
-                    </div>
-                    <div className="p-4">
-                        <Link className="text-lg md:text-2xl hover:text-blue-500"
-                            rel="noopener noreferrer"
-                            to={`skills`}>
-                            <p className="text-lg pl-3 pr-3 hover:bg-blue-400 hover:border-black dark:hover:border-black dark:hover:text-black hover:text-black border-blue-700 dark:border-blue-900 border-2 rounded-full text-blue-700 dark:text-blue-400 flex items-center">
-                                Learn more
-                                <FaLongArrowAltRight className="ml-1" size={20} />
-                            </p>
-                        </Link>
                     </div>
                 </div>
             </div>
