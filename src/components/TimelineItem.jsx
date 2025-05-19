@@ -1,6 +1,25 @@
 import React from "react";
 
-function TimelineItem({ year, title, duration, details, time_unit }) {
+function TimelineItem({ year, title, duration, details, time_unit, loading }) {
+    if (loading) {
+        return (
+            <ol className="flex flex-col md-flex-row relative border-l border-stone-200 dark:border-stone-700">
+                <li className="mb-10 ml-4">
+                    <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
+                    <div className="flex flex-wrap gap-4 flex-row items-center justify-start">
+                        <div className="h-6 w-16 bg-stone-200 dark:bg-stone-700 rounded-full animate-pulse"></div>
+                        <div className="h-6 w-48 bg-stone-200 dark:bg-stone-700 rounded animate-pulse"></div>
+                        <div className="h-4 w-24 bg-stone-200 dark:bg-stone-700 rounded animate-pulse"></div>
+                    </div>
+                    <div className="mt-2">
+                        <div className="h-4 w-full bg-stone-200 dark:bg-stone-700 rounded animate-pulse mb-2"></div>
+                        <div className="h-4 w-5/6 bg-stone-200 dark:bg-stone-700 rounded animate-pulse"></div>
+                    </div>
+                </li>
+            </ol>
+        );
+    }
+
     return (
         <ol className="flex flex-col md-flex-row relative border-l border-stone-200 dark:border-stone-700">
             <li className="mb-10 ml-4">

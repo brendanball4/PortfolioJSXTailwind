@@ -1,42 +1,64 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import projects from '../data/portfolio';
 import Title from './Title';
 import Carousel from './Carousel';
+import useDirectusCollection from './api/useDirectusCollection';
 
 const ProjectItem = () => {
   const { id } = useParams(); // This gets the `id` from the URL
-  
+
   // Convert `id` to a number since project IDs are numbers
   const projectId = Number(id);
-  
-  // Find the project with the given ID
-  const project = projects.find(project => project.id === projectId);
 
-  if (!project) {
-    return <div className=''>
-                <h1 className='text-red-400 underline text-2xl'>Project not found!</h1>
-                <p className='text-white text-lg'>Please contact the <a href='mailto:ball.brendan10@gmail.com' className='text-blue-500 hover:text-blue-300 hover:underline'>site owner</a> if the problem persists.</p>
-            </div>;
-  }
+  const { entries, loading } = useDirectusCollection('projects', projectId);
+
+  if (loading) return (
+    <div className='grid grid-flow-row-dense md:grid-cols-2 md:grid-rows-2'>
+      {/* Project Title Skeleton */}
+      <div className='pt-28'>
+        <div className="h-8 w-3/4 bg-stone-200 dark:bg-stone-700 rounded animate-pulse mb-5"></div>
+        <div className="h-4 w-full bg-stone-200 dark:bg-stone-700 rounded animate-pulse mt-8"></div>
+        <div className="h-4 w-5/6 bg-stone-200 dark:bg-stone-700 rounded animate-pulse mt-2"></div>
+      </div>
+
+      {/* Image Carousel Skeleton */}
+      <div className='min-w-[200px] max-w-[600px] mx-auto my-auto md:ml-16 row-span-2'>
+        <div className="aspect-video w-full bg-stone-200 dark:bg-stone-700 rounded animate-pulse"></div>
+      </div>
+
+      {/* Stack Display Skeleton */}
+      <div>
+        <div className="h-4 w-24 bg-stone-200 dark:bg-stone-700 rounded animate-pulse pt-10 mb-2"></div>
+        <div className="flex flex-wrap gap-2">
+          {[1, 2, 3, 4].map((item) => (
+            <div key={item} className="h-8 w-20 bg-stone-200 dark:bg-stone-700 rounded animate-pulse"></div>
+          ))}
+        </div>
+        
+        <div className="mt-4">
+          <div className="h-10 w-32 bg-stone-200 dark:bg-stone-700 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className='grid grid-flow-row-dense md:grid-cols-2 md:grid-rows-2'>
         {/* Project Title */}
         <div className='pt-28'>
-            <Title>{project.title_ext}</Title>
-            <p className='mt-8 text-black dark:text-stone-300'>{project.desc}</p>
+            <Title>{entries.page_title}</Title>
+            <p className='mt-8 text-black dark:text-stone-300'>{entries.page_desc}</p>
         </div>
 
         {/* Image Carousel */}
         <div className='min-w-[200px] max-w-[600px] mx-auto my-auto md:ml-16 row-span-2'>
-          <Carousel images={project.images} />
+          <Carousel images={entries.image_urls} />
         </div>
 
         {/* Stack Display */}
         <div>
           <p className='pt-10 mb-2'>Stack used:</p>
-        {project.stack.map(item => (
+        {entries.stack.map(item => (
           <div key={item} className="rounded-full mr-2 mb-2 text-stone-900 bg-stone-300 inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-stone-300 rounded-md">
               {item}
           </div>
@@ -44,7 +66,7 @@ const ProjectItem = () => {
         
         <div>
           <a
-            href={project.link}
+            href={entries.link}
             target="_blank"
             rel="noopener noreferrer"
             className="social-link github hover:text-blue-400 bg-stone-500 dark:bg-gray-500 p-2 text-white inline-flex items-center space-x-2 rounded-full">
