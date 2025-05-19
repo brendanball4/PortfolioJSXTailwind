@@ -4,8 +4,6 @@ import techstack from '../data/techstack';
 import databases from '../data/databases';
 import skills from '../data/skills';
 import TechstackItem from './TechstackItem';
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 
 function Techstack() {
     return (
