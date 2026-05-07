@@ -10,9 +10,9 @@ function ProjectPage() {
   const project = projects.find(p => p.id === projectId);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen pt-14">
       {/* Sidebar */}
-      <aside className="w-64 shrink-0 border-r border-stone-300 dark:border-stone-700 flex flex-col pt-6 px-4">
+      <aside className="w-56 shrink-0 flex flex-col pt-6 px-4 my-6 border-r border-stone-300 dark:border-stone-700">
         <button
           onClick={() => navigate('/')}
           className="flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white mb-8 transition-colors"
@@ -45,7 +45,7 @@ function ProjectPage() {
 
       {/* Main content */}
       {project ? (
-        <main className="flex-1 flex flex-col px-10 py-8 overflow-y-auto">
+        <main className="flex-1 flex flex-col px-10 py-8 max-w-5xl overflow-y-auto">
           {/* Title row */}
           <div className="flex items-start justify-between mb-4">
             <h1 className="text-2xl font-bold text-stone-900 dark:text-white">{project.title_ext}</h1>

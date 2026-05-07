@@ -73,17 +73,20 @@ function App() {
 
   return (
     <>
-		<button
-			type="button"
-			onClick={handleThemeSwitch}
-			className="absolute 2xl:fixed p-2 z-10 right-[15px] sm:right-[40px] top-4 bg-violet-300 hover:dark:bg-violet-300 hover:bg-orange-300 dark:bg-orange-300 text-lg p-1 rounded-md"
-		>
-			{theme === "dark" ? sun : moon}
-		</button>
-		<div className="absolute 2xl:fixed right-[70px] sm:right-[95px] top-5 border-r-2 border-gray-900 dark:border-blue-100 h-6"></div>
-		<Navbar />
 	<Router>
       <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+		<Routes>
+			<Route path="/project/:id" element={<ProjectPage />} />
+			<Route path="*" element={
+			<>
+				<button type="button" onClick={handleThemeSwitch} className="absolute 2xl:fixed p-2 z-10 right-[15px] sm:right-[40px] top-4 bg-violet-300 hover:dark:bg-violet-300 hover:bg-orange-300 dark:bg-orange-300 text-lg p-1 rounded-md">
+					{theme === "dark" ? sun : moon}
+				</button>
+				<div className="absolute 2xl:fixed right-[70px] sm:right-[95px] top-5 border-r-2 border-gray-900 dark:border-blue-100 h-6"></div>
+				<Navbar />
+			</>
+			} />
+		</Routes>
 		<Routes>
 			<Route path="/" element={
 				<div className="max-w-5xl w-11/12 mx-auto">
@@ -95,7 +98,6 @@ function App() {
 					<Footer />
 				</div>
 			} />
-			<Route path="/project/:id" element={<ProjectPage />} />
 			<Route path="/programming" element={<ProgrammingPage />} />
 			<Route path="/databases" element={<DatabasePage />} />
 			<Route path="/skills" element={<SkillsPage />} />
