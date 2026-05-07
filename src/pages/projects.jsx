@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import projects from '../data/portfolio';
 import Carousel from '../components/Carousel';
+import { FiHome } from 'react-icons/fi';
 
 function ProjectPage() {
   const { id } = useParams();
@@ -10,23 +11,24 @@ function ProjectPage() {
   const project = projects.find(p => p.id === projectId);
 
   return (
-    <div className="flex min-h-screen pt-14">
+    <div className="flex min-h-screen max-w-[1600px] mx-auto w-full px-10">
       {/* Sidebar */}
-      <aside className="w-56 shrink-0 flex flex-col pt-6 px-4 my-6 border-r border-stone-300 dark:border-stone-700">
-        <button
-          onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white mb-8 transition-colors"
-        >
-          ← Back
-        </button>
-
-        <nav className="flex flex-col gap-1">
+      <aside className="w-[33rem] shrink-0 flex flex-col px-4 my-40 border-r border-stone-300 dark:border-stone-700">
+        <nav className="flex flex-col gap-1 flex-1 justify-center mb-24">
+          <Link
+            to="/"
+            className="relative text-[1.3rem] py-2 pr-2 transition-all duration-200 group text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white mb-4"
+          >
+            <FiHome className="inline-block mr-2 mb-0.5" />Home
+            <span className="absolute bottom-0 left-0 h-[2px] bg-violet-500 dark:bg-violet-400 transition-all duration-300 w-0 group-hover:w-full" />
+          </Link>
+          <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-2 mt-2">Projects</p>
           {projects.map(p => (
             <Link
               key={p.id}
               to={`/project/${p.id}`}
               className={`
-                relative text-sm py-2 pr-2 transition-all duration-200 group
+                relative text-[1.3rem] py-2 pr-2 transition-all duration-200 group
                 ${p.id === projectId
                   ? 'text-stone-900 dark:text-white font-semibold'
                   : 'text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white'
@@ -45,7 +47,7 @@ function ProjectPage() {
 
       {/* Main content */}
       {project ? (
-        <main className="flex-1 flex flex-col px-10 py-8 max-w-5xl overflow-y-auto">
+        <main className="flex-1 flex flex-col px-16 pt-[18vh] overflow-y-auto">
           {/* Title row */}
           <div className="flex items-start justify-between mb-4">
             <h1 className="text-2xl font-bold text-stone-900 dark:text-white">{project.title_ext}</h1>
@@ -76,7 +78,7 @@ function ProjectPage() {
 
           {/* Carousel */}
           <div className="w-full rounded-xl overflow-hidden">
-            <Carousel images={project.images} height="h-auto" />
+            <Carousel images={project.images} height="h-[420px]" />
           </div>
         </main>
       ) : (
