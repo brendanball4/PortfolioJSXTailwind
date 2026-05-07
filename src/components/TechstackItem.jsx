@@ -7,7 +7,7 @@ function TechstackItem({ stack_name, img_url }) {
             {stack_name}
         </div>
          <div className="w-full p-4 bg-stone-200 rounded-md">
-            <img src={img_url} className="w-10 h-10 object-contain mx-auto"></img>
+            <img src={img_url} className="w-14 h-14 object-contain mx-auto"></img>
          </div>
    </div>
    );
