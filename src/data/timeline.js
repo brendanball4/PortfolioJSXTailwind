@@ -6,9 +6,9 @@ export default [
         details: "Full-stack development encompassing PHP, Laravel, SvelteKit, WebSockets (Pusher), and front-end, back-end, and database development.",
     },
     {
-        year: "Sept 2024 - July 2025",
+        year: "2024 - 2025",
         title: "Junior Software Developer at Tangle Media Inc.",
-        duration: "10 mo",
+        duration: "2024 - 2025",
         details: "Full-stack development encompassing PHP, Laravel, SvelteKit, WebSockets (Pusher), and front-end, back-end, and database development.",
     },
     {
