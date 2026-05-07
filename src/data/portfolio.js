@@ -7,7 +7,7 @@ export default [
         desc: 'This advanced solar energy platform brings together data from multiple solar arrays, delivering real-time analytics and management capabilities. Developed with C#, .NET Core, and Blazor Server, the system leverages MudBlazor for a sleek and responsive UI, EF Core for robust data management, and Selenium for seamless web automation.',
         images: ['https://i.imgur.com/sR1vkMl.png', 'https://i.imgur.com/I9xxsUD.png'],
         stack: [ 'C#', 'Blazor Server', 'MudBlazor', 'EF Core 6', 'MSSQL', 'Azure Cloud Hosting'],
-        link: 'https://solar-mhc-fwa9d2e7c6dna7c7.eastus-01.azurewebsites.net/',
+        link: 'https://github.com/brendanball4/solarmhc',
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export default [
         desc: 'Using ASP.NET Core with Razor Pages following the MVC model, we created an application that successfully allows for three types of users to access the system. The admin, student, and the employer. They weave in with eachother with certain features such as the timesheets, forms, and student/employer management. They are first met with a dashboard, but each have their own features. The main interaction in this system is the: Job postings, Forms, and Timesheets.',
         images: ['https://i.imgur.com/1gm6nR9.png', 'https://i.imgur.com/dElJtvH.png', 'https://i.imgur.com/wQFUkMC.png', 'https://i.imgur.com/B1bpfno.png', 'https://i.imgur.com/g9CS7qj.png', 'https://i.imgur.com/HsQvdfA.png', 'https://i.imgur.com/F2OTKEB.png', 'https://i.imgur.com/Vr0OIej.png'],
         stack: ['C#', 'ASP.NET Core 6', 'MVC', 'Razor Pages', 'EF Core 6', 'MSSQL', 'Bootstrap 5'],
-        link: 'https://github.com/Diazrob/CITPracticum'
+        link: 'https://github.com/brendanball4/CITPracticum'
     },
     {
         id: 3,
