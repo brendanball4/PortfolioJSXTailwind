@@ -76,7 +76,7 @@ function ProjectPage() {
 
           {/* Carousel */}
           <div className="w-full rounded-xl overflow-hidden">
-            <Carousel images={project.images} />
+            <Carousel images={project.images} height="h-[480px]" />
           </div>
         </main>
       ) : (

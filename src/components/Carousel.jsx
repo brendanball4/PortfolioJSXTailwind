@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiZoomIn, FiX, FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images, height = 'h-64' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -46,7 +46,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="flex flex-col items-center justify-center relative">
-      <div className="relative w-full h-[480px] overflow-hidden group">
+      <div className={`relative w-full ${height} overflow-hidden group`}>
         {/* Adjusted Image Container */}
         <div className="relative w-full h-full">
 
