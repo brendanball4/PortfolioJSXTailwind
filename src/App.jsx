@@ -90,8 +90,8 @@ function App() {
 						<Portfolio />
 						<Timeline />
 						<ScrollToTopButton />
-						<Footer />
 					</div>
+					<Footer />
 				</>
 			} />
 			<Route path="/programming" element={<ProgrammingPage />} />
