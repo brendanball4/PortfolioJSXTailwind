@@ -84,27 +84,23 @@ function App() {
 		<Navbar />
 	<Router>
       <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-		<div className="max-w-5xl w-11/12 mx-auto">
-			<Routes>
+		<Routes>
 			<Route path="/" element={
-				<>
-				{/* Your main page components */}
-				<Intro />
-				<Techstack />
-				<Portfolio />
-				<Timeline />
-				<ScrollToTopButton />
-				</>
+				<div className="max-w-5xl w-11/12 mx-auto">
+					<Intro />
+					<Techstack />
+					<Portfolio />
+					<Timeline />
+					<ScrollToTopButton />
+					<Footer />
+				</div>
 			} />
 			<Route path="/project/:id" element={<ProjectPage />} />
 			<Route path="/programming" element={<ProgrammingPage />} />
 			<Route path="/databases" element={<DatabasePage />} />
 			<Route path="/skills" element={<SkillsPage />} />
 			<Route path="*" element={<Navigate to="/" replace />} />
-			{/* Define other routes as needed */}
-			</Routes>
-		</div>
-		<Footer />
+		</Routes>
 	  </div>
     </Router>
 	 </>

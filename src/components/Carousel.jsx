@@ -46,7 +46,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="flex flex-col items-center justify-center relative">
-      <div className="relative w-full max-w-4xl h-64 overflow-hidden group">
+      <div className="relative w-full h-[480px] overflow-hidden group">
         {/* Adjusted Image Container */}
         <div className="relative w-full h-full">
 
