@@ -91,7 +91,7 @@ const Navbar = () => {
         href='https://drive.google.com/file/d/1LvC5RbO9rfrQnz6W2pFlmUzZ6yAtMwHY/view?usp=sharing'
         target='_blank'
         className="social-link resume hover:text-orange-300 bg-stone-500 dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[100px] sm:right-[115px] p-2 top-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
-        <svg width={25} height={25} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <svg width={16} height={16} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
         </svg>
         Resume
