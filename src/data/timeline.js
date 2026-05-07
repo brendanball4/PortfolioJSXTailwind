@@ -1,5 +1,17 @@
 export default [
     {
+        year: "2025 - Present",
+        title: "Software Developer at Tangle Media Inc.",
+        duration: "Present",
+        details: "Full-stack development encompassing PHP, Laravel, SvelteKit, WebSockets (Pusher), and front-end, back-end, and database development.",
+    },
+    {
+        year: "Sept 2024 - July 2025",
+        title: "Junior Software Developer at Tangle Media Inc.",
+        duration: "10 mo",
+        details: "Full-stack development encompassing PHP, Laravel, SvelteKit, WebSockets (Pusher), and front-end, back-end, and database development.",
+    },
+    {
         year: "2024",
         title: "Full-stack Developer at Medicine Hat College",
         duration: "4 mo (Contract, May-Aug)",
