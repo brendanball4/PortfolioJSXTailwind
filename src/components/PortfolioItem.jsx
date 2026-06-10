@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function PortfolioItem({ id, title, images, mini_desc, stack = [] }) {
    return (
       <div className="group flex flex-col rounded-xl overflow-hidden bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 shadow-sm hover:shadow-lg hover:border-violet-400 dark:hover:border-violet-400 hover:-translate-y-1 transition-all duration-300">
-         <Carousel images={images} height="h-52" />
+         <Carousel images={images} height="h-44" />
          <div className="flex flex-col flex-1 p-5">
             <h3 className="text-lg md:text-xl font-semibold text-stone-900 dark:text-white mb-2">
                {title}

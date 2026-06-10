@@ -13,7 +13,7 @@ const cards = [
     },
     {
         title: 'Backend & Databases',
-        desc: 'C# and .NET are home base for APIs, with SQL databases handling the data behind them.',
+        desc: 'Modern PHP and Laravel are the day-to-day at work, alongside C# and .NET for APIs, with SQL databases behind it all.',
         items: databases,
     },
     {
