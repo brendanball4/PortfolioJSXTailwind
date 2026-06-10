@@ -1,6 +1,7 @@
 import { discordUsername, emailAddress, linkedin, github } from '../constants/constants';
+import { FiDownload } from 'react-icons/fi';
 
-const Navbar = () => {
+const Navbar = ({ theme, onToggleTheme }) => {
 	const copyToClipboard = (text) => {
 	  navigator.clipboard.writeText(text).then(
 		() => {
@@ -18,15 +19,55 @@ const Navbar = () => {
 	  );
 	};
 
+	const iconButton = "p-2 rounded-full cursor-pointer text-stone-600 dark:text-stone-300 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-stone-200/70 dark:hover:bg-stone-700/70 transition-colors duration-150";
+
+	const sun = (
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+		</svg>
+	);
+
+	const moon = (
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+		</svg>
+	);
+
   return (
-    <>
+    <div className="fixed z-20 top-4 right-4 sm:right-8 flex items-center gap-0.5 px-2 py-1.5 rounded-full bg-white/70 dark:bg-stone-800/70 backdrop-blur-md border border-stone-200 dark:border-stone-700 shadow-sm">
+      <a
+        onClick={() => copyToClipboard(discordUsername)}
+        title="Discord"
+        className={iconButton}>
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="18" height="18"
+            className="w-[18px] h-[18px]"
+            fill="currentColor"
+            viewBox="0 0 16 16">
+                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+        </svg>
+      </a>
+
+      <a
+        onClick={() => copyToClipboard(emailAddress)}
+        title="Email"
+        className={iconButton}>
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="18" height="18"
+            fill="currentColor"
+            viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+        </svg>
+      </a>
+
       <a
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link linkedin hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed right-[240px] sm:right-[265px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
+        title="LinkedIn"
+        className={iconButton}>
         <svg
-            className="w-5 h-5 fill-current"
+            className="w-[18px] h-[18px] fill-current"
             role="img"
             viewBox="0 0 256 256"
             xmlns="http://www.w3.org/2000/svg"
@@ -41,13 +82,13 @@ const Navbar = () => {
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="social-link github hover:text-orange-300 dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[200px] sm:right-[225px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
+        title="GitHub"
+        className={iconButton}>
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
-            className="w-5"
+            className="w-[18px] h-[18px]"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 24 24"
             >
@@ -63,40 +104,24 @@ const Navbar = () => {
       </a>
 
       <a
-        onClick={() => copyToClipboard(emailAddress)}
-        className="social-link email hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 right-[280px] sm:right-[305px] cursor-pointer p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-            width="20" height="20" 
-            fill="currentColor" 
-            className="bi bi-envelope-fill" 
-            viewBox="0 0 16 16">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-        </svg>
-      </a>
-
-
-      <a
-        onClick={() => copyToClipboard(discordUsername)}
-        className="social-link discord hover:text-orange-300  dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[320px] sm:right-[345px] p-2 top-3.5 font-semibold text-violet-500 dark:text-white inline-flex items-center space-x-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-            width="20" height="20"
-            className="bi bi-discord w-5"
-            fill="currentColor" 
-            viewBox="0 0 16 16">
-                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-        </svg>
-      </a>
-
-      <a
         href='https://drive.google.com/file/d/1LvC5RbO9rfrQnz6W2pFlmUzZ6yAtMwHY/view?usp=sharing'
         target='_blank'
-        className="social-link resume hover:text-orange-300 bg-stone-500 dark:hover:text-violet-300 absolute 2xl:fixed z-10 cursor-pointer right-[100px] sm:right-[115px] p-2 top-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
-        <svg width={25} height={25} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
-        </svg>
+        rel="noopener noreferrer"
+        className="ml-1 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-semibold text-white bg-violet-600 hover:bg-violet-500 transition-colors duration-150">
+        <FiDownload className="w-4 h-4" />
         Resume
       </a>
-    </>
+
+      <span className="mx-1.5 h-5 w-px bg-stone-300 dark:bg-stone-600" />
+
+      <button
+        type="button"
+        onClick={onToggleTheme}
+        title="Toggle theme"
+        className={iconButton}>
+        {theme === "dark" ? sun : moon}
+      </button>
+    </div>
   );
 };
 

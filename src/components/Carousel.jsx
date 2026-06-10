@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
-import { FiZoomIn, FiX, FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { FiZoomIn, FiX, FiArrowLeft, FiArrowRight, FiImage } from 'react-icons/fi';
 
 const Carousel = ({ images, height = 'h-64' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  // Graceful fallback when a project has no screenshots yet
+  if (!images || images.length === 0) {
+    return (
+      <div className={`relative w-full ${height} flex items-center justify-center bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-700 dark:to-stone-800`}>
+        <div className="flex flex-col items-center gap-2 text-stone-500 dark:text-stone-400">
+          <FiImage className="text-5xl" />
+          <span className="text-sm font-medium">Screenshots coming soon</span>
+        </div>
+      </div>
+    );
+  }
 
   // Go to previous image
   const goToPrevious = () => {

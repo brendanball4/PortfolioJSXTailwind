@@ -1,54 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { FiArrowUp } from 'react-icons/fi';
 import { motion, AnimatePresence } from "framer-motion";
 
 const ScrollToTopButton = () => {
   const [showScroll, setShowScroll] = useState(false);
-  const [isArrowHovered, setIsArrowHovered] = useState(false); // New state for arrow hover
-
-  const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 100) {
-      setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 100) {
-      setShowScroll(false);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
-      checkScrollTop();
+      setShowScroll(window.pageYOffset > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [showScroll]); // Added showScroll as a dependency
+  }, []);
 
   const scrollTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setShowScroll(false);
   };
 
   return (
     <AnimatePresence>
       {showScroll && (
-        <motion.div
-          className="fixed bottom-0 right-0 mb-2 mr-2 z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}>
-          <button
-            className="fixed p-2 right-10 hover:text-white hidden md:block dark:hover:text-violet-300 bottom-4 bg-violet-300 dark:bg-gray-600 text-lg p-5 rounded-3xl"
-            onClick={scrollTop}
-            onMouseEnter={() => setIsArrowHovered(true)} // Set arrow hover state to true
-            onMouseLeave={() => setIsArrowHovered(false)} // Set arrow hover state to false
-          >
-            <div className={`hover:animate-pulse ${isArrowHovered ? 'animate-pulse' : ''}`}>
-              <FaArrowUp />
-            </div>
-          </button>
-        </motion.div>
+        <motion.button
+          onClick={scrollTop}
+          title="Back to top"
+          className="group fixed bottom-5 right-5 sm:right-8 z-50 p-3 rounded-full bg-white/70 dark:bg-stone-800/70 backdrop-blur-md border border-stone-200 dark:border-stone-700 shadow-sm text-stone-600 dark:text-stone-300 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-400 dark:hover:border-violet-400 transition-colors duration-150"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 12 }}
+        >
+          <FiArrowUp className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-0.5" />
+        </motion.button>
       )}
     </AnimatePresence>
   );
