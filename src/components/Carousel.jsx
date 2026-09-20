@@ -73,32 +73,32 @@ const Carousel = ({ images, height = 'h-64' }) => {
           </div>
         </div>
 
-        {/* Arrows: glass buttons that fade in on hover */}
+        {/* Arrows: solid buttons that fade in on hover */}
         {images.length > 1 && (
           <>
             <button
               onClick={goToPrevious}
               aria-label="Previous image"
-              className="absolute top-1/2 left-2 -translate-y-1/2 p-2 rounded-full bg-white/70 dark:bg-stone-900/60 backdrop-blur-md border border-stone-200/60 dark:border-stone-600/60 text-stone-700 dark:text-stone-200 shadow-sm opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-400 transition-all duration-200"
+              className="absolute top-1/2 left-2 -translate-y-1/2 p-2 bg-stone-900 text-white shadow-md opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 hover:bg-accent-600 transition-all duration-200"
             >
               <FiArrowLeft className='w-4 h-4' />
             </button>
             <button
               onClick={goToNext}
               aria-label="Next image"
-              className="absolute top-1/2 right-2 -translate-y-1/2 p-2 rounded-full bg-white/70 dark:bg-stone-900/60 backdrop-blur-md border border-stone-200/60 dark:border-stone-600/60 text-stone-700 dark:text-stone-200 shadow-sm opacity-0 group-hover:opacity-100 translate-x-1 group-hover:translate-x-0 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-400 transition-all duration-200"
+              className="absolute top-1/2 right-2 -translate-y-1/2 p-2 bg-stone-900 text-white shadow-md opacity-0 group-hover:opacity-100 translate-x-1 group-hover:translate-x-0 hover:bg-accent-600 transition-all duration-200"
             >
               <FiArrowRight className='w-4 h-4' />
             </button>
 
             {/* Dot indicators */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 px-2 py-1 rounded-full bg-black/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 px-2 py-1.5 bg-stone-900 shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               {images.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentIndex(i)}
                   aria-label={`Go to image ${i + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-4 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/80'}`}
+                  className={`h-1.5 transition-all duration-300 ${i === currentIndex ? 'w-4 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/80'}`}
                 />
               ))}
             </div>
@@ -121,7 +121,7 @@ const Carousel = ({ images, height = 'h-64' }) => {
               goToPreviousModalImage();
             }}
             aria-label="Previous image"
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/25 hover:scale-105 active:scale-95 transition-all duration-150 z-50"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-stone-900 text-white shadow-md hover:bg-accent-600 transition-colors z-50"
           >
             <FiArrowLeft className='w-6 h-6' />
           </button>
@@ -131,7 +131,7 @@ const Carousel = ({ images, height = 'h-64' }) => {
               goToNextModalImage();
             }}
             aria-label="Next image"
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/25 hover:scale-105 active:scale-95 transition-all duration-150 z-50"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-stone-900 text-white shadow-md hover:bg-accent-600 transition-colors z-50"
           >
             <FiArrowRight className='w-6 h-6' />
           </button>
@@ -140,17 +140,17 @@ const Carousel = ({ images, height = 'h-64' }) => {
       <button
         onClick={closeModal}
         aria-label="Close"
-        className="absolute right-4 top-4 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/25 hover:rotate-90 transition-all duration-200 z-50"
+        className="absolute right-4 top-4 p-3 bg-stone-900 text-white shadow-md hover:bg-accent-600 transition-colors z-50"
       >
         <FiX className='w-6 h-6' />
       </button>
       {images.length > 1 && (
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm z-50">
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 px-3 py-1 bg-stone-900 text-white font-mono text-xs shadow-md z-50">
           {images.indexOf(selectedImage) + 1} / {images.length}
         </div>
       )}
   <div
-    className="relative bg-white p-4 rounded-lg shadow-lg max-w-[950px] xl:max-w-[1500px] 2-xl:max-w-[300px] mx-auto my-auto"
+    className="relative bg-white p-4 shadow-lg max-w-[950px] xl:max-w-[1500px] 2-xl:max-w-[300px] mx-auto my-auto"
     onClick={(e) => e.stopPropagation()}
   >
 

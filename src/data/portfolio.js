@@ -68,6 +68,7 @@ export default [
     },
     {
         id: 6,
+        archived: true,
         title: 'Image Converter',
         title_ext: 'Cross-Platform Image Converter',
         mini_desc: 'A small desktop app for batch-converting images between formats, with everything processed locally. Built with Electron and Svelte.',
@@ -78,11 +79,12 @@ export default [
     },
     {
         id: 7,
+        archived: true,
         title: 'Practicum Management System',
         title_ext: 'Practicum Management Web Application',
         mini_desc: 'A web app for the Lethbridge College practicum program, with job postings, forms, timesheets, and management tools for students, employers, and admins.',
         desc: 'The Lethbridge College practicum program needed one place for students, employers, and admins to handle the whole placement process. Each role gets its own dashboard: employers post jobs, students apply and log timesheets, and admins keep an eye on everything through forms and management tools. Built with ASP.NET Core and Razor Pages following the MVC pattern.',
-        images: imagesFor('practicum-management', ['https://i.imgur.com/1gm6nR9.png', 'https://i.imgur.com/dElJtvH.png', 'https://i.imgur.com/wQFUkMC.png', 'https://i.imgur.com/B1bpfno.png', 'https://i.imgur.com/g9CS7qj.png', 'https://i.imgur.com/HsQvdfA.png', 'https://i.imgur.com/F2OTKEB.png', 'https://i.imgur.com/Vr0OIej.png']),
+        images: imagesFor('practicum-management', ['https://i.imgur.com/dElJtvH.png', 'https://i.imgur.com/wQFUkMC.png', 'https://i.imgur.com/B1bpfno.png', 'https://i.imgur.com/g9CS7qj.png', 'https://i.imgur.com/HsQvdfA.png', 'https://i.imgur.com/F2OTKEB.png', 'https://i.imgur.com/Vr0OIej.png']),
         stack: ['C#', 'ASP.NET Core 6', 'MVC', 'Razor Pages', 'EF Core 6', 'MSSQL', 'Bootstrap 5'],
         link: 'https://github.com/brendanball4/CITPracticum'
     },
@@ -108,16 +110,18 @@ export default [
     },
     {
         id: 10,
+        archived: true,
         title: 'Business Management System',
         title_ext: 'Business Management System',
         mini_desc: 'A customer, inventory, and invoicing system built with PHP and MySQL. A database class project that turned into a full management app.',
         desc: 'A database class project that grew into a proper management app, co-built with a colleague. It covers the basics a small business actually needs: customer records, invoicing, and inventory tracking, all tied together. PHP 8.1 and MySQL under the hood, with Bootstrap for the front end.',
-        images: imagesFor('business-management', ['https://i.imgur.com/8Vrprho.png', 'https://i.imgur.com/SdzSeQ4.png', 'https://i.imgur.com/xw1Xm9A.png', 'https://i.imgur.com/W79wASw.png', 'https://i.imgur.com/Tgd54pZ.png', 'https://i.imgur.com/UxkoD9A.png', 'https://i.imgur.com/84OLbkC.png']),
+        images: imagesFor('business-management', ['https://i.imgur.com/SdzSeQ4.png', 'https://i.imgur.com/xw1Xm9A.png', 'https://i.imgur.com/W79wASw.png', 'https://i.imgur.com/Tgd54pZ.png', 'https://i.imgur.com/UxkoD9A.png', 'https://i.imgur.com/84OLbkC.png']),
         stack: ['PHP8.1', 'MySQL', 'Bootstrap 4', 'HTML/CSS'],
         link: 'https://github.com/cdmoss/3660-Project',
     },
     {
         id: 11,
+        archived: true,
         title: 'Souls-like created with Unity',
         title_ext: 'Souls-like created with Unity',
         mini_desc: 'A Dark Souls-style game project in Unity, with combat scripted in C# and the models and animations made in Blender.',

@@ -7,9 +7,9 @@ function Portfolio() {
    const featured = portfolio.filter(p => p.featured);
 
    return (
-      <div className='mt-8'>
-         <Title>Showcased Projects</Title>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className='mt-16'>
+         <Title id="projects">A few things I've built</Title>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featured.map(project => (
                <PortfolioItem
                   key={project.id}

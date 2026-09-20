@@ -5,7 +5,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['inter', 'serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'Inter', 'sans-serif'],
+      },
+      colors: {
+        paper: '#faf7f3',
+        ink: '#171311',
+        // warm terracotta pulled from the brick in the hero photo
+        accent: {
+          300: '#f2b98f',
+          400: '#e69a62',
+          500: '#d4773b',
+          600: '#b85f2a',
+          700: '#944a20',
+          800: '#6e3717',
+        },
       },
       animation: {
         fadeIn: "fadeIn 0.5s ease-in forwards",
