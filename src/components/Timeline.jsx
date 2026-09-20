@@ -13,7 +13,9 @@ function Entries({ items }) {
                             {item.role}
                             <span className="font-sans font-normal text-stone-500"> · {item.org}</span>
                         </h3>
-                        <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">{item.details}</p>
+                        {item.details && (
+                            <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">{item.details}</p>
+                        )}
                     </div>
                 </li>
             ))}

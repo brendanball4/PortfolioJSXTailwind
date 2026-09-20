@@ -13,7 +13,7 @@ export const experience = [
     },
     {
         year: "2020 to 2021",
-        role: "Developer",
+        role: "Software Developer",
         org: "Medicine Hat Food Bank",
         details: "Built an HR and volunteer management app for the food bank with C#, Blazor, EF Core, and MariaDB, replacing a lot of manual scheduling and paperwork.",
     },
@@ -23,13 +23,11 @@ export const education = [
     {
         year: "2020 to 2024",
         role: "BSc Computer Science",
-        org: "Medicine Hat College",
-        details: "A steady stream of software projects along the way. Several of them are on this page.",
+        org: "University of Lethbridge",
     },
     {
         year: "2018 to 2020",
         role: "Software Development Diploma",
         org: "Medicine Hat College",
-        details: "Member of Phi Theta Kappa.",
     },
 ];
