@@ -27,6 +27,17 @@ export default [
     {
         id: 2,
         featured: true,
+        title: 'Webhook City',
+        title_ext: 'Webhook & Log Ingest Dashboard',
+        mini_desc: 'A dashboard that catches webhooks and logs from services like Netlify, GitHub, and Xcode Cloud, sorts them into projects, and streams them live. Can also relay events to Slack or Discord.',
+        desc: 'I kept wanting one place to see what all my services were doing, so I built it. Webhook City gives each project its own authenticated ingest URLs for webhooks and logs, stores every payload as it comes in, and shows them in a live event stream on the dashboard. Each endpoint gets a health card so you can spot failures at a glance, and any project can relay its events to a Slack or Discord channel, either everything or just the endpoints you pick. The frontend is Next.js and React, and the backend is a C# Web API on Postgres, all running in Docker.',
+        images: imagesFor('webhook-city'),
+        stack: ['Next.js', 'React', 'C#', 'ASP.NET Web API', 'PostgreSQL', 'Docker', 'TypeScript'],
+        link: '',
+    },
+    {
+        id: 3,
+        featured: true,
         title: 'Restaurant Ordering Portal',
         title_ext: 'Online Restaurant Ordering Portal',
         mini_desc: 'An online ordering system for restaurants. Customers browse the menu, place an order, and pay through Stripe. Built with SvelteKit and a C# Web API.',
@@ -36,8 +47,7 @@ export default [
         link: '',
     },
     {
-        id: 3,
-        featured: true,
+        id: 4,
         title: 'Medicine Hat College Solar Monitoring',
         title_ext: 'Solar Car Canopy Monitoring System',
         mini_desc: 'A monitoring platform for Medicine Hat College\'s solar car canopy that pulls energy data from multiple sources into one real-time dashboard.',
@@ -47,7 +57,7 @@ export default [
         link: 'https://github.com/brendanball4/solarmhc',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Directus Collection Anonymizer',
         title_ext: 'Directus Collection Anonymizer Extension',
         mini_desc: 'A Directus extension that anonymizes existing data in a collection by replacing real values with fake ones. Built with Vue 3 for the latest Directus versions.',
@@ -57,7 +67,7 @@ export default [
         link: '',
     },
     {
-        id: 5,
+        id: 6,
         title: 'Image Converter',
         title_ext: 'Cross-Platform Image Converter',
         mini_desc: 'A small desktop app for batch-converting images between formats, with everything processed locally. Built with Electron and Svelte.',
@@ -67,7 +77,7 @@ export default [
         link: '',
     },
     {
-        id: 6,
+        id: 7,
         title: 'Practicum Management System',
         title_ext: 'Practicum Management Web Application',
         mini_desc: 'A web app for the Lethbridge College practicum program, with job postings, forms, timesheets, and management tools for students, employers, and admins.',
@@ -77,7 +87,7 @@ export default [
         link: 'https://github.com/brendanball4/CITPracticum'
     },
     {
-        id: 7,
+        id: 8,
         title: 'HR Admin & Volunteer Management System',
         title_ext: 'HR Admin & Volunteer Management System',
         mini_desc: 'A volunteer management app for the local food bank. Scheduling and coordination for admins, shift sign-ups and availability for volunteers.',
@@ -87,7 +97,7 @@ export default [
         link: 'https://github.com/cdmoss/hrmanager-blazorapp',
     },
     {
-        id: 8,
+        id: 9,
         title: 'Developer Portfolio',
         title_ext: 'Developer Portfolio Web Application',
         mini_desc: 'The site you\'re on right now. Built with React, Vite, and Tailwind, and hosted off a Raspberry Pi at home.',
@@ -97,7 +107,7 @@ export default [
         link: 'https://github.com/brendanball4/PortfolioJSXTailwind',
     },
     {
-        id: 9,
+        id: 10,
         title: 'Business Management System',
         title_ext: 'Business Management System',
         mini_desc: 'A customer, inventory, and invoicing system built with PHP and MySQL. A database class project that turned into a full management app.',
@@ -107,7 +117,7 @@ export default [
         link: 'https://github.com/cdmoss/3660-Project',
     },
     {
-        id: 10,
+        id: 11,
         title: 'Souls-like created with Unity',
         title_ext: 'Souls-like created with Unity',
         mini_desc: 'A Dark Souls-style game project in Unity, with combat scripted in C# and the models and animations made in Blender.',
@@ -117,7 +127,7 @@ export default [
         link: 'https://github.com/brendanball4/DSTut',
     },
     {
-        id: 11,
+        id: 12,
         title: 'Graphic Design & 3D Modelling',
         title_ext: 'Graphic Design & 3D Modelling using Blender',
         mini_desc: 'A collection of 3D work in Blender. Started as game assets, turned into a hobby of its own.',
